@@ -1,13 +1,11 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Main from './pages/Main/Main';
-import Signup from './pages/Signup/Signup';
-import Login from './pages/Login/Login';
-import ItemList from './pages/ItemList/ItemList';
-import ItemDetail from './pages/ItemDetail/ItemDetail';
-
-// import './pages/Main/Main.scss';
+import Main from "./pages/Main/Main";
+import Signup from "./pages/Signup/Signup";
+import Login from "./pages/Login/Login";
+import ItemList from "./pages/ItemList/ItemList";
+import ItemDetail from "./pages/ItemDetail/ItemDetail";
 
 const Router = () => {
   return (
