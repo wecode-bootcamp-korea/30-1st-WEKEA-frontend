@@ -1,0 +1,60 @@
+@import '../../../styles/mixin.scss';
+
+.radio,
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  input[type='radio'],
+  input[type='checkbox'] {
+    position: absolute;
+    left: -0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .checkboxRadio {
+    @include flexBox(center);
+    margin-right: 20px;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid gray;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      border-radius: 50%;
+      width: 1rem;
+      height: 1rem;
+      background-color: gray;
+    }
+    // .checkedCircleCheckBox {
+    //   padding: 3px;
+    //   border-radius: 50px;
+    //   width: 16px;
+    //   height: 16px;
+    //   background-color: gray;
+    // }
+  }
+
+  .comment {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      cursor: pointer;
+    }
+  }
+}
