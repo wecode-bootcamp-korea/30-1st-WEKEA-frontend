@@ -22,7 +22,7 @@ export default function LoginAside() {
             <span className="subText">지금가입 내용</span>
           </div>
           <button type="button" className="signBtn">
-            >
+            {'>'}
           </button>
         </Link>
       </div>
