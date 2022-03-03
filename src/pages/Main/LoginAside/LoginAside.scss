@@ -10,12 +10,24 @@ $loginColor: #0058a3;
   height: 100vh;
   border: 1px solid red;
 
+  .closeBtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .closeBtn:hover {
+    cursor: pointer;
+    background-color: #e2e2e2;
+  }
+
   .account {
     @include flexBox(center, center, row);
     width: 100%;
     border-bottom: 1px solid rgba(220, 226, 255, 0.336);
-    padding: 120px 40px 48px;
+    padding: 120px 48px 48px;
     background-color: $loginColor;
+
     h1 {
       font-size: 36px;
       color: white;
@@ -33,11 +45,15 @@ $loginColor: #0058a3;
       font-size: 14px;
       font-weight: bold;
     }
+    .loginBtn:hover {
+      cursor: pointer;
+      background-color: #e2e2e2;
+    }
   }
 
   .signLink {
     @include flexBox(center, center, row);
-    width: 500px;
+    width: 498px;
     padding: 20px 48px;
     background-color: $loginColor;
     text-decoration: none !important;
@@ -61,12 +77,18 @@ $loginColor: #0058a3;
     .subText {
       font-size: 12px;
     }
-    .loginBtn {
+
+    .signBtn {
       width: 45px;
       height: 45px;
       border: none;
       border-radius: 100px;
       font-size: 30px;
+    }
+
+    .signBtn:hover {
+      text-decoration: none;
+      background-color: #e2e2e2;
     }
   }
 
@@ -79,11 +101,10 @@ $loginColor: #0058a3;
     .login {
       margin-bottom: 30px;
       color: black;
-      text-decoration: none !important;
-
-      :hover {
-        text-decoration: underline;
-      }
+      text-decoration: none;
+    }
+    .login:hover {
+      text-decoration: underline;
     }
   }
 }
