@@ -1,0 +1,67 @@
+@import '../../../styles/mixin.scss';
+
+.asideBox {
+  height: 338px;
+  width: 495px;
+  @include flexBox(center, center, column);
+  background-color: black;
+
+  .asideBoxNav {
+    @include flexBox(center, top, row);
+    background-color: wheat;
+
+    .ItemName {
+      background-color: #0158a3;
+    }
+
+    .ItemPrice {
+      width: 100px;
+      height: 68px;
+      background-color: aquamarine;
+    }
+  }
+
+  .asideBoxBtn {
+    @include flexBox(center, center, row);
+
+    .buyBtn {
+      width: 25vw;
+      height: 55px;
+      border-radius: 35px;
+      border: 0;
+      color: #ffffff;
+      background-color: #0158a3;
+      cursor: pointer;
+    }
+
+    .addCartBtn {
+      width: 5vw;
+      height: 55px;
+      border: 1px solid #bcbcbc;
+      background-color: #ffffff;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  .asideBoxInfo {
+    @include flexBox(center, left, column);
+    background-color: yellow;
+
+    .itemStock {
+      @include flexBox(center, center, column);
+      background-color: aqua;
+      .itemStockIcon {
+        @include flexBox(start, center, row);
+        background-color: #0158a3;
+      }
+      .itemStockState {
+        background-color: #ffffff;
+      }
+    }
+    .remainStock {
+      @include flexBox(start, center, row);
+      background-color: #0158a3;
+    }
+  }
+}
