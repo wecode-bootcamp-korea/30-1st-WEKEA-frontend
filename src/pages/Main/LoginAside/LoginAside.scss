@@ -1,7 +1,7 @@
 @import '../../../styles/mixin.scss';
 
 $loginColor: #0058a3;
-.loginAsideWrap {
+.loginAside {
   @include flexBox(none, center, column);
   position: absolute;
   top: 0px;
@@ -14,11 +14,11 @@ $loginColor: #0058a3;
     position: absolute;
     top: 15px;
     right: 15px;
-  }
-
-  .closeBtn:hover {
     cursor: pointer;
-    background-color: #e2e2e2;
+
+    &:hover {
+      background-color: #e2e2e2;
+    }
   }
 
   .account {

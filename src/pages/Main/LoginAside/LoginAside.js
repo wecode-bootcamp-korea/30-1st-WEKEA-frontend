@@ -3,7 +3,7 @@ import './LoginAside.scss';
 
 export default function LoginAside() {
   return (
-    <div className="loginAsideWrap">
+    <div className="loginAside">
       <img alt="닫기버튼" src="" className="closeBtn" />
       <div className="account">
         <h1>Hej</h1>
