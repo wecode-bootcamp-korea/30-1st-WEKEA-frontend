@@ -1,0 +1,48 @@
+@import '../../../styles/mixin.scss';
+
+.contentsBox {
+  @include flexBox(center, start, column);
+
+  .itemImg {
+    width: 590px;
+    background-color: bisque;
+  }
+
+  .itemDescriptionBox {
+    background-color: aquamarine;
+    @include flexBox(center, start, column);
+    width: 590px;
+
+    .itemNumList {
+      background-color: tan;
+      width: 87px;
+      height: 18px;
+      @include flexBox(start, center, row);
+      font-size: 10px;
+    }
+
+    .itemNum {
+      width: 87px;
+      height: 18px;
+      @include flexBox(center, center, row);
+      background-color: black;
+      color: white;
+      font-size: 10px;
+      font-weight: bold;
+    }
+  }
+
+  .itemSubDescriptionBtn {
+    background-color: red;
+    @include flexBox(space-between, center, row);
+    height: 120px;
+    width: 590px;
+  }
+
+  .itemReviewBtn {
+    background-color: blue;
+    @include flexBox(space-between, center, row);
+    height: 120px;
+    width: 590px;
+  }
+}
