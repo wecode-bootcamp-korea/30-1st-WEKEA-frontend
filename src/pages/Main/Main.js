@@ -1,8 +1,30 @@
+import { useState } from 'react';
+
 import LinkPoints from './component/LinkPoints';
 
 import './Main.scss';
 
 export default function Main() {
+  const [points, setPoints] = useState([
+    {
+      id: 1,
+      image:
+        'https://images.unsplash.com/photo-1593791767540-fb2bddb20b9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+      main: true,
+      sub1: false,
+      coordinate: { top: '550px', left: '405px' },
+      commentLocation: { bottom: '8px', left: '0' },
+    },
+    {
+      id: 2,
+      image:
+        'https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1709&q=80',
+      main: true,
+      sub1: false,
+      coordinate: { top: '490px', left: '200px' },
+      commentLocation: { bottom: '8px', left: '0' },
+    },
+  ]);
   return (
     <>
       <div className="saleProductHeader">
@@ -16,8 +38,16 @@ export default function Main() {
         <button className="saleProductMoreBtn">자세히 보기</button>
       </div>
       <div className="saleProductList">
-        <LinkPoints imgSrc="https://images.unsplash.com/photo-1593791767540-fb2bddb20b9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
-        {/* <LinkPoints imgSrc="https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1709&q=80" /> */}
+        {points.map(point => {
+          return (
+            <LinkPoints
+              key={point.id}
+              image={point.image}
+              coordinate={point.coordinate}
+              commentLocation={point.commentLocation}
+            />
+          );
+        })}
       </div>
     </>
   );

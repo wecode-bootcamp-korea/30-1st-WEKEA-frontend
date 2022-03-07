@@ -4,20 +4,13 @@ import LinkPoint from './LinkPoint';
 
 import './LinkPoints.scss';
 
-export default function linkPoints({ imgSrc }) {
+export default function LinkPoints({ image, coordinate, commentLocation }) {
   return (
     <div className="saleProduct">
       <Link className="saleProductImg" to="/">
-        <img alt="saleProductImg" src={imgSrc} />
+        <img alt="saleProductImg" src={image} />
       </Link>
-      <LinkPoint
-        coordinate={{ top: '550px', left: '405px' }}
-        commentLocation={{ bottom: '8px', left: '0' }}
-      />
-      {/* <LinkPoint
-        coordinate={{ top: '480px', left: '320px' }}
-        commentLocation={{ bottom: '8px', left: '0' }} */}
-      />
+      <LinkPoint coordinate={coordinate} commentLocation={commentLocation} />
     </div>
   );
 }
