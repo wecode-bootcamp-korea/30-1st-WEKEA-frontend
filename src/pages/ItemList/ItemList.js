@@ -1,7 +1,20 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { SelectionWrap } from './SelectionWrap/SelectionWrap.js';
+import { ProductionItem } from './ProductionItem/ProductionItem.js';
+
 import './ItemList.scss';
 
 export default function ItemList() {
+  const [itemList, setItemList] = useState([]);
+  useEffect(() => {
+    fetch('/data/itemList.json')
+      .then(res => res.json())
+      .then(data => {
+        setItemList(data.result);
+      });
+  }, []);
+
   return (
     <div className="itemListWrap">
       <div className="categoryNav">
@@ -38,102 +51,41 @@ export default function ItemList() {
         조명패널, 모션센서 또는 기타 장치를 더할 수도 있고요. 기분에 따라
         분위기를 연출해보세요.
       </p>
-      <div className="selectionWrap">
-        <div className="selectionDetail">
-          <button className="selectionBtn">
-            정렬<span>&#709;</span>
-          </button>
-          <button className="selectionBtn">
-            베스트셀러<span>&#709;</span>
-          </button>
-          <button className="selectionBtn">
-            베이스<span>&#709;</span>
-          </button>
-          <button className="selectionBtn">
-            가격<span>&#709;</span>
-          </button>
-          <button className="selectionBtn">
-            밝기<span>&#709;</span>
-          </button>
-          <button className="selectionBtn">
-            모든 필터<span>&#709;</span>
-          </button>
-        </div>
-        <div className="selectionInformation">
-          <span>3개 항목</span>
-          <button className="informationBtn">제품</button>
-          <button className="informationBtn">공간</button>
-        </div>
-      </div>
+      <SelectionWrap />
       <div className="productionListWrap">
         <div className="productionList">
-          <div className="productionItem">
-            <div className="imgCover">
-              <img
-                alt="상품이미지"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          {itemList.map((item, index) => {
+            return (
+              <ProductionItem
+                key={index}
+                title={item.name}
+                text={item.description}
+                src={item.image_list}
+                price={item.price}
               />
-            </div>
-            <p>Tradfri 프로드프리</p>
-            <span className="detailText">
-              리모컨키드,<span>E26</span>
-            </span>
-            <div className="priceWrap">
-              <span className="won">₩</span>
-              <span className="price">34,900</span>
-            </div>
-          </div>
-          <div className="productionItem">
-            <div className="imgCover">
-              <img
-                alt="상품이미지"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
-              />
-            </div>
-            <p>Tradfri 프로드프리</p>
-            <span className="detailText">
-              리모컨키드,<span>E26</span>
-            </span>
-            <div className="priceWrap">
-              <span className="won">
-                ₩<span className="price">34,900</span>
-              </span>
-            </div>
-          </div>{' '}
-          <div className="productionItem">
-            <div className="imgCover">
-              <img
-                alt="상품이미지"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
-              />
-            </div>
-            <p>Tradfri 프로드프리</p>
-            <span className="detailText">
-              리모컨키드,<span>E26</span>
-            </span>
-            <div className="priceWrap">
-              <span className="won">
-                ₩<span className="price">34,900</span>
-              </span>
-            </div>
-          </div>{' '}
-          <div className="productionItem">
-            <div className="imgCover">
-              <img
-                alt="상품이미지"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
-              />
-            </div>
-            <p>Tradfri 프로드프리</p>
-            <span className="detailText">
-              리모컨키드,<span>E26</span>
-            </span>
-            <div className="priceWrap">
-              <span className="won">
-                ₩<span className="price">34,900</span>
-              </span>
-            </div>
-          </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="ProductionRecomment">
+        <p>추천제품</p>
+        <div className="recommentList">
+          {itemList.map((item, index) => {
+            return (
+              <Link to="" className="productionItem" key={index}>
+                <div className="imgCover">
+                  <img alt="상품이미지" src={item.image_list[0]} />
+                </div>
+                <p>{item.name}</p>
+                <span className="detailText">{item.description}</span>
+                <div className="priceWrap">
+                  <span className="won">₩</span>
+                  <span className="price">{item.price}</span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>

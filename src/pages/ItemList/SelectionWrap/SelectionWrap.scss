@@ -1,0 +1,104 @@
+@import '../../../styles/mixin.scss';
+
+.selectionWrap {
+  @include flexBox(space-between, flex-start, row);
+  width: 100%;
+  padding: 30px 0px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+
+  .selectBtnWrap {
+    @include flexBox(space-between, flex-start, row);
+
+    .selectionDetail {
+      margin-right: 30px;
+      position: relative;
+
+      .selectionBtn {
+        border: none;
+        border-radius: 30px;
+        padding: 10px 25px;
+        font-size: 13px;
+        font-weight: bold;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        span {
+          padding-left: 15px;
+          font-size: 15px;
+          pointer-events: none;
+        }
+      }
+      .selectionAfterBtn {
+        border: none;
+        border-radius: 30px;
+        background-color: black;
+        color: white;
+        padding: 10px 25px;
+        font-size: 13px;
+        font-weight: bold;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        span {
+          padding-left: 15px;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .hide {
+      @include flexBox(center, center, column);
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+    .show {
+      visibility: visible;
+      @include flexBox(space-around, center, column);
+      z-index: 1;
+      position: absolute;
+      top: 40px;
+      width: 230px;
+
+      padding: 5px 15px;
+      border: 1px solid gainsboro;
+      border-radius: 7px;
+      background-color: white;
+      font-size: 14px;
+      box-shadow: 0px 0px 10px 2px rgba(112, 112, 112, 0.226);
+      .selectionCheckList {
+        width: 100%;
+        height: 100%;
+        padding-top: 10px;
+        margin: 10px 0px;
+        .labels {
+          @include flexBox(space-between, flex-start);
+          width: 100%;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  .selectionInformation {
+    span {
+      margin-right: 10px;
+      color: rgb(119, 119, 119);
+      font-size: 12px;
+    }
+
+    .informationBtn {
+      width: 47px;
+      height: 32px;
+      border: 1px solid rgb(221, 221, 221);
+      border-radius: 5px;
+      background-color: white;
+      font-size: 13px;
+      font-weight: bold;
+    }
+  }
+}

@@ -2,20 +2,19 @@
 
 body {
   /*임시확인용*/
-  @include flexBox(center, center, row);
+  @include flexBox(center);
 }
 .itemListWrap {
   @include flexBox(flex-start, flex-start, column);
-  width: 90vw;
-  height: 150vh;
-  border: 1px solid red;
+  width: 1100px;
+  height: 2000px;
 
   .categoryNav {
     width: 100%;
     margin: 30px 0px 90px 0px;
 
     .categories {
-      @include flexBox(flex-start, center, row);
+      @include flexBox(flex-start);
       font-size: 12px;
 
       li {
@@ -49,73 +48,62 @@ body {
     line-height: 150%;
   }
 
-  .selectionWrap {
-    @include flexBox(space-between, center, row);
+  .productionListWrap {
+    @include flexBox(center);
     width: 100%;
-    padding: 30px 0px;
-    border-bottom: 1px solid rgb(221, 221, 221);
+    width: 100%;
 
-    .selectionBtn {
-      border: none;
-      border-radius: 30px;
-      margin-right: 8px;
-      padding: 10px 25px;
-      font-size: 13px;
-      font-weight: bold;
-
-      span {
-        padding-left: 15px;
-        font-size: 15px;
-      }
-    }
-    :hover {
-      cursor: pointer;
-    }
-
-    .selectionInformation {
-      span {
-        margin-right: 10px;
-        color: rgb(119, 119, 119);
-        font-size: 12px;
-      }
-
-      .informationBtn {
-        width: 47px;
-        height: 32px;
-        border: 1px solid rgb(221, 221, 221);
-        border-radius: 5px;
-        background-color: white;
-        font-size: 13px;
-        font-weight: bold;
-      }
+    .productionList {
+      @include flexBox(flex-start, flex-start);
+      flex-wrap: wrap;
+      margin: 10px 0px;
     }
   }
-  .productionListWrap {
-    @include flexBox(center, center, column);
-    width: 100%;
-    .productionList {
-      @include flexBox(flex-start, flex-start, row);
-      flex-wrap: wrap;
-      border-bottom: 1px solid rgb(221, 221, 221);
+
+  .ProductionRecomment {
+    @include flexBox(center, flex-start, column);
+
+    p {
+      margin-top: 80px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .recommentList {
+      @include flexBox(flex-start, center, row);
+      width: 1098px;
+      height: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
 
       .productionItem {
         @include flexBox(center, flex-start, column);
-        margin: 30px 12px 20px 12px;
-        flex: 1 0 0;
+        padding: 30px 12px 20px 12px;
+        text-decoration: none;
+        color: black;
+        padding-bottom: 50px;
+        border-bottom: 1px solid rgb(221, 221, 221);
+
+        &:hover {
+          text-decoration: underline;
+        }
 
         img {
-          width: 262px;
-          height: 262px;
+          width: 240px;
+          height: 240px;
           margin-bottom: 20px;
         }
 
         p {
+          margin-top: 0px;
           font-size: 14px;
           font-weight: bold;
           margin-bottom: 8px;
         }
 
         .detailText {
+          width: 240px;
+          overflow: hidden;
+          line-height: 150%;
           font-size: 12px;
           margin-bottom: 15px;
         }
