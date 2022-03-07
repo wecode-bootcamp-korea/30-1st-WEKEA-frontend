@@ -1,0 +1,129 @@
+@import '../../../styles/mixin.scss';
+
+.radio,
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #484848;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: black;
+
+    .checkboxRadio {
+      border-color: black;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 45px;
+  }
+
+  input[type='radio'],
+  input[type='checkbox'] {
+    position: absolute;
+    left: -0.5rem;
+    top: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .checkboxRadio {
+    @include flexBox(center);
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 20px;
+    border: 1px solid #484848;
+    border-radius: 50%;
+
+    &::after {
+      content: '';
+    }
+  }
+
+  .comment {
+    display: flex;
+    flex-direction: column;
+    max-width: 366.695px;
+    line-height: 1.71429;
+
+    label {
+      cursor: pointer;
+    }
+
+    a {
+      color: #484848;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+
+.checkboxChildren {
+  margin-left: 40px;
+
+  &:last-child {
+    padding-bottom: 20px;
+  }
+}
+
+.radio {
+  input[type='radio']:checked ~ .checkboxRadio {
+    border-color: #0058a3;
+
+    &::after {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background-color: #0058a3;
+    }
+  }
+
+  input[type='radio']:checked ~ .comment label {
+    color: black;
+  }
+
+  .checkboxRadio {
+    border-radius: 50%;
+  }
+}
+
+.checkbox {
+  input[type='checkbox']:checked ~ .checkboxRadio {
+    background-color: #0058a3;
+  }
+
+  input[type='checkbox']:checked ~ .comment label {
+    color: black;
+  }
+
+  .checkboxRadio {
+    border-radius: 4px;
+    transition: background 0.2s ease-in-out;
+  }
+
+  i {
+    color: white;
+  }
+
+  .requiredError {
+    position: absolute;
+    top: 55px;
+    color: #e00751;
+    font-size: 12px;
+    visibility: hidden;
+  }
+
+  .errorMessage {
+    visibility: visible;
+  }
+}
