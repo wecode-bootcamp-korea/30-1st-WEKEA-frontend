@@ -1,30 +1,58 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import LinkPoints from './component/LinkPoints';
 
 import './Main.scss';
 
 export default function Main() {
-  const [points, setPoints] = useState([
-    {
-      id: 1,
-      image:
-        'https://images.unsplash.com/photo-1593791767540-fb2bddb20b9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-      main: true,
-      sub1: false,
-      coordinate: { top: '550px', left: '405px' },
-      commentLocation: { bottom: '8px', left: '0' },
-    },
-    {
-      id: 2,
-      image:
-        'https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1709&q=80',
-      main: true,
-      sub1: false,
-      coordinate: { top: '490px', left: '200px' },
-      commentLocation: { bottom: '8px', left: '0' },
-    },
-  ]);
+  const [points, setPoints] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/mainSaleProduct.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(res => setPoints(res));
+  }, []);
+
+  const hoverDot = (imgIndex, dotIndex) => {
+    const changePoints = points.map((point, index) => {
+      if (index === imgIndex) {
+        for (let i = 0; i < point.dots.length; i++) {
+          if (i === dotIndex) {
+            point.dots[i].defaultHover = true;
+          } else {
+            point.dots[i].defaultHover = false;
+          }
+        }
+      }
+      return point;
+    });
+    setPoints(changePoints);
+  };
+
+  const mouseOutDot = imgIndex => {
+    const changePoints = points.map((point, index) => {
+      if (index === imgIndex) {
+        for (let i = 0; i < point.dots.length; i++) {
+          point.dots[i].defaultHover = false;
+        }
+      }
+      return point;
+    });
+    setPoints(changePoints);
+  };
+
+  const mouseOutImg = imgIndex => {
+    const changePoints = points.map((point, index) => {
+      if (index === imgIndex) {
+        point.dots[0].defaultHover = true;
+      }
+      return point;
+    });
+    setPoints(changePoints);
+  };
+
   return (
     <>
       <div className="saleProductHeader">
@@ -38,13 +66,16 @@ export default function Main() {
         <button className="saleProductMoreBtn">자세히 보기</button>
       </div>
       <div className="saleProductList">
-        {points.map(point => {
+        {points.map((point, index) => {
           return (
             <LinkPoints
               key={point.id}
+              imgIndex={index}
               image={point.image}
-              coordinate={point.coordinate}
-              commentLocation={point.commentLocation}
+              dots={point.dots}
+              hoverDot={hoverDot}
+              mouseOutDot={mouseOutDot}
+              mouseOutImg={mouseOutImg}
             />
           );
         })}

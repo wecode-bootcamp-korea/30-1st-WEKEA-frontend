@@ -16,17 +16,11 @@
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      border-color: rgba(255, 255, 255, 0.5);
       background: rgba(0, 0, 0, 0.4);
+    }
 
-      &::after {
-        width: 8px;
-        height: 8px;
-      }
-
-      & ~ .linkPointCommentWrapper {
-        visibility: visible;
-      }
+    &:active {
+      background: rgba(0, 0, 0, 0.6);
     }
 
     &::before {
@@ -47,8 +41,24 @@
     }
   }
 
+  .connectingDotHover {
+    border-color: rgba(255, 255, 255, 0.5);
+
+    &::after {
+      width: 8px;
+      height: 8px;
+    }
+
+    & ~ .linkPointCommentWrapper {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
   .linkPointCommentWrapper {
     visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
 
     .linkPointComment {
       position: absolute;
@@ -58,6 +68,7 @@
       background-color: white;
       line-height: 20px;
       box-shadow: 0 1px 4px rgb(0 0 0 / 55%);
+      z-index: 1;
 
       &:hover {
         .productName {
@@ -66,15 +77,16 @@
       }
 
       .title {
+        margin-bottom: 5px;
         color: #ed022a;
         font-size: 0.875rem;
         font-weight: 700;
       }
 
       .productName {
-        margin-top: 5px;
         font-size: 14px;
         font-weight: 700;
+        word-break: keep-all;
       }
 
       .productType {
@@ -83,6 +95,7 @@
       }
 
       .productPrice {
+        @include flexBox(flex-start, flex-start, column);
         margin-top: 20px;
 
         del {
