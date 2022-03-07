@@ -1,0 +1,111 @@
+@import '../../../styles/mixin.scss';
+
+.linkPoint {
+  position: absolute;
+
+  .connectingDot {
+    position: absolute;
+    @include flexBox(center);
+    padding: 0;
+    height: 28px;
+    width: 28px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.5);
+      background: rgba(0, 0, 0, 0.4);
+
+      &::after {
+        width: 8px;
+        height: 8px;
+      }
+
+      & ~ .linkPointCommentWrapper {
+        visibility: visible;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 44px;
+      height: 44px;
+    }
+
+    &::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: white;
+      box-shadow: 0 1px 4px rgb(0 0 0 / 55%);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  .linkPointCommentWrapper {
+    visibility: hidden;
+
+    .linkPointComment {
+      position: absolute;
+      padding: 10px 6px 10px 15px;
+      width: 114px;
+      color: black;
+      background-color: white;
+      line-height: 20px;
+      box-shadow: 0 1px 4px rgb(0 0 0 / 55%);
+
+      &:hover {
+        .productName {
+          text-decoration: underline;
+        }
+      }
+
+      .title {
+        color: #ed022a;
+        font-size: 0.875rem;
+        font-weight: 700;
+      }
+
+      .productName {
+        margin-top: 5px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .productType {
+        color: #484848;
+        font-size: 14px;
+      }
+
+      .productPrice {
+        margin-top: 20px;
+
+        del {
+          color: #484848;
+          font-size: 12px;
+        }
+
+        .won {
+          align-self: baseline;
+          font-size: 0.625rem;
+        }
+
+        .price {
+          font-size: 16px;
+          font-weight: 700;
+        }
+      }
+
+      i {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+}
