@@ -25,10 +25,26 @@ export default function ItemDetailContents() {
     setReviewOpen(false);
   };
 
+  const [itemData, setItemData] = useState([]);
+
+  useEffect(
+    () =>
+      fetch('http://10.58.2.221:8000/products/detail?product=1', {
+        method: 'GET',
+      })
+        .then(res => res.json())
+        .then(result => setItemData(result)),
+    []
+  );
+
+  console.log(itemData.images);
+
   return (
     <div className="contentsBox">
       <div className="itemImg">
-        <img className="Image" alt="ItemImg" src="/public/images/img.jpg" />
+        {itemData.length > 0 && (
+          <img className="Image" alt="ItemImg" src={itemData.images[0]} />
+        )}
       </div>
       <div className="itemDescriptionBox">
         <p className="itemDescription">
