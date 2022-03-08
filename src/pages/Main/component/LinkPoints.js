@@ -29,13 +29,7 @@ export default function LinkPoints({
             key={index}
             imgIndex={imgIndex}
             dotIndex={index}
-            onSale={dot.onSale}
-            productName={dot.productName}
-            category={dot.category}
-            price={dot.price}
-            defaultHover={dot.defaultHover}
-            coordinate={dot.coordinate}
-            commentLocation={dot.commentLocation}
+            dot={dot}
             hoverDot={hoverDot}
             mouseOutDot={mouseOutDot}
           />

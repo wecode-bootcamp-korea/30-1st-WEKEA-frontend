@@ -5,20 +5,23 @@ import './LinkPoint.scss';
 export default function LinkPoint({
   imgIndex,
   dotIndex,
-  onSale,
-  productName,
-  category,
-  price,
-  defaultHover,
-  coordinate,
-  commentLocation,
+  dot,
   hoverDot,
   mouseOutDot,
 }) {
+  const {
+    onSale,
+    productName,
+    category,
+    price,
+    defaultHover,
+    coordinate,
+    commentLocation,
+  } = dot;
   const applySale = price => {
     return (
       Math.ceil((price.replace(/,/g, '') * (onSale ? 0.7 : 1)) / 1000) * 1000
-    ).toLocaleString('ko-KR');
+    ).toLocaleString();
   };
 
   return (
@@ -56,7 +59,7 @@ export default function LinkPoint({
             {onSale && <del>{`₩ ${price}`}</del>}
             <span className="productCurrentPrice">
               <span className="won">₩</span>
-              <span className="price">{` ${applySale(price)}`}</span>
+              <span className="price"> {applySale(price)}</span>
             </span>
           </div>
           <i className="fas fa-solid fa-angle-right" />
