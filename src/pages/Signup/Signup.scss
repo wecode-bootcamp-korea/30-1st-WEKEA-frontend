@@ -1,1 +1,48 @@
-// Hello
+@import '../../styles/mixin.scss';
+
+$signupWidth: 411px;
+$sideTitleWidth: 286px;
+
+.signUp {
+  position: absolute;
+  left: 50%;
+  transform: translate(
+    calc((($signupWidth - $sideTitleWidth) / 2)) * (-1) + 80px
+  );
+  padding: 64px 0;
+  width: 411px;
+  font-size: 14px;
+
+  .membership {
+    margin-bottom: 45px;
+
+    .membershipTitle {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+  }
+
+  .signupForm {
+    .signupSubmitBtn {
+      all: unset;
+      @include flexBox(center);
+      width: 100%;
+      height: 56px;
+      margin-bottom: 20px;
+      border-radius: 28px;
+      color: white;
+      background-color: black;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #484848;
+      }
+    }
+
+    .contactCheckboxes {
+      margin-bottom: 45px;
+    }
+  }
+}

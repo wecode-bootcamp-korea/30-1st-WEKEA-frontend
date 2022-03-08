@@ -7,11 +7,12 @@ import './ItemList.scss';
 
 export default function ItemList() {
   const [itemList, setItemList] = useState([]);
+
   useEffect(() => {
     fetch('/data/itemList.json')
       .then(res => res.json())
       .then(data => {
-        setItemList(data.result);
+        setItemList(data.result[0].product_data_list);
       });
   }, []);
 
@@ -51,17 +52,27 @@ export default function ItemList() {
         조명패널, 모션센서 또는 기타 장치를 더할 수도 있고요. 기분에 따라
         분위기를 연출해보세요.
       </p>
-      <SelectionWrap />
+      <SelectionWrap
+        price={itemList.price}
+        startList={itemList.average_rating}
+        store={itemList.store_list}
+        color={itemList.size_list}
+        stock={itemList.remaining_stock}
+      />
       <div className="productionListWrap">
         <div className="productionList">
           {itemList.map((item, index) => {
             return (
               <ProductionItem
+                newData={itemList}
                 key={index}
                 title={item.name}
-                text={item.description}
+                starList={item.average_rating}
                 src={item.image_list}
                 price={item.price}
+                store={item.store_list}
+                color={item.color_list}
+                size={item.size_list}
               />
             );
           })}

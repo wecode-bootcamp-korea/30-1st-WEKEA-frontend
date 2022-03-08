@@ -1,16 +1,47 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductionItem.scss';
 
-export function ProductionItem({ title, text, src, price }) {
-  const [currentImg, setCurrentImg] = useState(0);
+export function ProductionItem({ title, src, price, starList, store, color }) {
+  const [star, setStar] = useState('');
+  const [storeNull, setStoreNull] = useState([]);
+
+  const rating = stars => {
+    switch (Math.floor(stars)) {
+      case 5:
+        setStar('★ ★ ★ ★ ★');
+        break;
+      case 4:
+        setStar('★ ★ ★ ★');
+        break;
+      case 3:
+        setStar('★ ★ ★');
+        break;
+      case 2:
+        setStar('★ ★');
+        break;
+      case 1:
+        setStar('★');
+        break;
+      default:
+        setStar('');
+        break;
+    }
+  };
+
+  useEffect(() => {
+    rating(starList);
+    store.length !== 0
+      ? setStoreNull(`sellStore`)
+      : setStoreNull(`sellStoreHidden`);
+  }, [starList, store.length]);
 
   return (
     <div className="productItemsWrap">
       <div className="productHover">
         <Link to="" className="productionItem">
           <div className="imgCover">
-            <img alt="상품이미지" src={src[currentImg]} />
+            <img alt="상품이미지" src={src[0]} />
             <p>{title}</p>
           </div>
           <div className="priceWrap">
@@ -18,10 +49,7 @@ export function ProductionItem({ title, text, src, price }) {
             <span className="price">{price.toLocaleString()}</span>
             <div className="star">
               <div>
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
+                <span>{star}</span>
               </div>
             </div>
           </div>
@@ -33,9 +61,11 @@ export function ProductionItem({ title, text, src, price }) {
       <div className="colorSelect">
         <p>보유 색상</p>
         <div className="productColorWrap">
-          <div className="productColor" id="color" name="colors" />
-          <div className="productColor" id="color" name="colors" />
+          {color.map((el, idx) => {
+            return <div key={idx} className={el} id="color" name="colors" />;
+          })}
         </div>
+        <p className="sellStore">보유 지점: {store + ''}</p>
       </div>
     </div>
   );

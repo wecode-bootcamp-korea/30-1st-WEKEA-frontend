@@ -2,94 +2,416 @@
   "message": "SUCCESS",
   "result": [
     {
-      "name": "MARKUS 마르쿠스",
-      "price": 199000,
-      "description": "의자의 각도와 높이를 마음대로 조절할 수 있어 오랫동안 편하게 앉을 수 있습니다. 메시 소재의 등받이 덕분에 공기가 잘 순환되어 바쁠 때도 상쾌하게 일할 수 있어요. 오래 곁에 두고 사용할 수 있도록 튼튼하게 제작된 제품입니다.",
-      "average_rating": 5.0,
-      "image_list": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+      "product_data_list": [
+        {
+          "name": "MARKUS 마르쿠스",
+          "price": 199000,
+          "description": "의자의 각도와 높이를 마음대로 조절할 수 있어 오랫동안 편하게 앉을 수 있습니다. 메시 소재의 등받이 덕분에 공기가 잘 순환되어 바쁠 때도 상쾌하게 일할 수 있어요. 오래 곁에 두고 사용할 수 있도록 튼튼하게 제작된 제품입니다.",
+          "average_rating": 5,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점", "동부산점"],
+          "color_list": ["red", "black", "white"],
+          "size_list": ["L", "M", "XL"],
+          "remaining_stock": 10
+        },
+        {
+          "name": "평범한 사무용의자ㅣ",
+          "price": 100000,
+          "description": "무난",
+          "average_rating": 4,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점", "기흥점"],
+          "color_list": ["white", "blue", "black"],
+          "size_list": ["XL", "L", "M", "S"],
+          "remaining_stock": 12
+        },
+        {
+          "name": "고급 사무용의자1",
+          "price": 1000000,
+          "description": "매우고급1",
+          "average_rating": 4,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점", "기흥점", "고양점", "동부산점"],
+          "color_list": ["white", "blue", "black"],
+          "size_list": ["XL", "L", "M", "S"],
+          "remaining_stock": 12
+        },
+        {
+          "name": "고급 사무용의자2",
+          "price": 1100000,
+          "description": "매우고급2",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자3",
+          "price": 1200000,
+          "description": "매우고급3",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자4",
+          "price": 1300000,
+          "description": "매우고급4",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자5",
+          "price": 1400000,
+          "description": "매우고급5",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자6",
+          "price": 1500000,
+          "description": "매우고급6",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자7",
+          "price": 1500001,
+          "description": "매우고급7",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자8",
+          "price": 1500002,
+          "description": "매우고급8",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자9",
+          "price": 1500003,
+          "description": "매우고급9",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자10",
+          "price": 1500004,
+          "description": "매우고급10",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자11",
+          "price": 1500005,
+          "description": "매우고급11",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자12",
+          "price": 1500006,
+          "description": "매우고급12",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자13",
+          "price": 1500007,
+          "description": "매우고급13",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자14",
+          "price": 1500008,
+          "description": "매우고급14",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자15",
+          "price": 1500009,
+          "description": "매우고급15",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자16",
+          "price": 1500010,
+          "description": "매우고급16",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자17",
+          "price": 1500011,
+          "description": "매우고급17",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자18",
+          "price": 1500012,
+          "description": "매우고급18",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자19",
+          "price": 1500013,
+          "description": "매우고급19",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자20",
+          "price": 1500014,
+          "description": "매우고급20",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자21",
+          "price": 1500015,
+          "description": "매우고급21",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자22",
+          "price": 1500016,
+          "description": "매우고급22",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        },
+        {
+          "name": "고급 사무용의자23",
+          "price": 1500017,
+          "description": "매우고급23",
+          "average_rating": null,
+          "image_list": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+          ],
+          "store_list": ["광명점"],
+          "color_list": ["white"],
+          "size_list": ["XL"],
+          "remaining_stock": 5
+        }
       ],
-      "store_list": ["광명점", "기흥점", "고양점", "동부산점"],
-      "color_list": ["solid wood", "black", "blue", "white"],
-      "size_list": ["L", "M", "XL"]
-    },
-    {
-      "name": "평범한 사무용의자",
-      "price": 150000,
-      "description": "매우 평범하고 무난함",
-      "average_rating": null,
-      "image_list": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
-      ],
-      "store_list": [],
-      "color_list": [],
-      "size_list": []
-    },
-    {
-      "name": "MARKUS 마르쿠스",
-      "price": 199000,
-      "description": "의자의 각도와 높이를 마음대로 조절할 수 있어 오랫동안 편하게 앉을 수 있습니다. 메시 소재의 등받이 덕분에 공기가 잘 순환되어 바쁠 때도 상쾌하게 일할 수 있어요. 오래 곁에 두고 사용할 수 있도록 튼튼하게 제작된 제품입니다.",
-      "average_rating": 5.0,
-      "image_list": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
-      ],
-      "store_list": ["광명점", "기흥점", "고양점", "동부산점"],
-      "color_list": ["solid wood", "black", "blue", "white"],
-      "size_list": ["L", "M", "XL"]
-    },
-    {
-      "name": "평범한 사무용의자",
-      "price": 150000,
-      "description": "매우 평범하고 무난함",
-      "average_rating": null,
-      "image_list": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
-      ],
-      "store_list": [],
-      "color_list": [],
-      "size_list": []
-    },
-    {
-      "name": "MARKUS 마르쿠스",
-      "price": 199000,
-      "description": "의자의 각도와 높이를 마음대로 조절할 수 있어 오랫동안 편하게 앉을 수 있습니다. 메시 소재의 등받이 덕분에 공기가 잘 순환되어 바쁠 때도 상쾌하게 일할 수 있어요. 오래 곁에 두고 사용할 수 있도록 튼튼하게 제작된 제품입니다.",
-      "average_rating": 5.0,
-      "image_list": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
-      ],
-      "store_list": ["광명점", "기흥점", "고양점", "동부산점"],
-      "color_list": ["solid wood", "black", "blue", "white"],
-      "size_list": ["L", "M", "XL"]
-    },
-    {
-      "name": "평범한 사무용의자",
-      "price": 150000,
-      "description": "매우 평범하고 무난함",
-      "average_rating": null,
-      "image_list": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
-      ],
-      "store_list": [],
-      "color_list": [],
-      "size_list": []
+      "default_filtering_options": {
+        "max_price": 1500017,
+        "store": ["광명점", "동부산점", "기흥점", "고양점"],
+        "color": ["red", "black", "white", "blue"],
+        "size": ["L", "M", "XL", "S"]
+      },
+      "product_hierarchy": "의자/사무용의자"
     }
   ]
 }

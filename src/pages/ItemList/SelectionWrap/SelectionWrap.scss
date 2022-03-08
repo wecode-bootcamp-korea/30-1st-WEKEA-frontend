@@ -30,6 +30,7 @@
           pointer-events: none;
         }
       }
+
       .selectionAfterBtn {
         border: none;
         border-radius: 30px;
@@ -70,15 +71,106 @@
       background-color: white;
       font-size: 14px;
       box-shadow: 0px 0px 10px 2px rgba(112, 112, 112, 0.226);
+
       .selectionCheckList {
-        width: 100%;
+        @include flexBox(flex-start, center, row);
+        flex-wrap: wrap;
+        width: 170px;
         height: 100%;
         padding-top: 10px;
-        margin: 10px 0px;
+
         .labels {
           @include flexBox(space-between, flex-start);
+
           width: 100%;
           height: 30px;
+        }
+        .colorRadioWrap {
+          margin-bottom: 10px;
+          display: inline-block;
+          flex-wrap: wrap;
+
+          .colorRadio input[type='checkbox'] {
+            display: none;
+          }
+
+          .colorRadio input[type='checkbox'] + div {
+            width: 35px;
+            height: 35px;
+            outline: 1px solid black;
+            border-radius: 50px;
+            margin: 10px;
+            cursor: pointer;
+          }
+
+          .colorRadio input[type='checkbox']:checked + div {
+            outline: 5px double black;
+          }
+
+          .red div {
+            background-color: red;
+          }
+
+          .blue div {
+            background-color: blue;
+          }
+
+          .brown div {
+            background-color: brown;
+          }
+          .white div {
+            background-color: white;
+          }
+
+          .grey div {
+            background-color: grey;
+          }
+
+          .black div {
+            background-color: black;
+          }
+        }
+      }
+      .priceRange {
+        @include flexBox(center, center);
+
+        .priceRangeWrap {
+          @include flexBox(space-between, center, column);
+          height: 100%;
+          width: 100%;
+
+          .minPrice {
+            text-align: right;
+            width: 70px;
+          }
+
+          .maxPrice {
+            text-align: right;
+            width: 70px;
+          }
+
+          span {
+            margin-top: 5px;
+            font-size: 10px;
+          }
+        }
+
+        .middleSpan {
+          height: 30px;
+          text-align: top;
+          margin: 10px;
+        }
+
+        button {
+          margin-left: 5px;
+          height: 45px;
+          font-size: 13px;
+          border-radius: 3px;
+          border: 1px solid black;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
     }
@@ -92,7 +184,7 @@
     }
 
     .informationBtn {
-      width: 47px;
+      width: 50px;
       height: 32px;
       border: 1px solid rgb(221, 221, 221);
       border-radius: 5px;
