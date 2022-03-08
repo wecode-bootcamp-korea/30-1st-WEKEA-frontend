@@ -12,8 +12,23 @@
 
     .backBlueNav {
       height: 65px;
-      background-color: wheat;
       @include flexBox(space-around, center);
+
+      .logo {
+        width: 90px;
+        height: 36px;
+        background-color: #ffffff;
+
+        .logoInside {
+          @include flexBox(center);
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          color: #ffffff;
+          font-weight: 1000;
+          background-color: #0158a3;
+        }
+      }
     }
 
     .backBlueMain {
@@ -23,6 +38,13 @@
         font-size: 40px;
         font-weight: bold;
         color: yellow;
+      }
+
+      p {
+        padding-top: 30px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
       }
     }
 
@@ -41,39 +63,149 @@
       height: 600px;
       @include flexBox(space-around, center, column);
 
-      .loginInput {
-        width: 460px;
-        @include flexBox(space-around, center, column);
-        position: relative;
-        border-bottom: 1px solid black;
-
-        &:focus-within {
-          border-bottom: 2px solid #0158a3;
-
-          span {
-            transform: translateY(-20px);
-            font-size: 0.5rem;
+      .id-form-field {
+        margin-bottom: 0 !important;
+        .id-input-wrap {
+          margin-bottom: 0.625rem;
+          position: relative;
+          display: block;
+          padding: 0;
+          input {
+            display: block;
+            width: 440px;
+            margin: 0;
+            outline: 0;
+            padding: 1.5rem 0 0 0.0625rem;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #929292;
+            appearance: none;
+            transition: box-shadow 0.2s;
+            font-size: 1rem;
+            line-height: 1.5;
+            box-sizing: border-box;
+          }
+          input:focus {
+            box-shadow: 0 1px 0 #0058a3;
+            border-bottom-color: #0058a3;
+            color: #0058a3;
+          }
+          input ~ label {
+            font-size: 1rem;
+            transition: all 0.2s ease-in-out;
+            transform-origin: top left;
+            pointer-events: none;
+            position: absolute;
+            top: 1.4375rem;
+            display: inline-block;
+            color: #484848;
+          }
+          input:focus ~ label {
+            transform: translateY(-1.4375rem) scale(0.75);
+            pointer-events: all;
           }
         }
-
-        .spanFix {
-          transform: translateY(-20px);
-          font-size: 0.5rem;
+        .labelled {
+          input ~ label {
+            transform: translateY(-1.4375rem) scale(0.75);
+            pointer-events: all;
+          }
         }
-
-        span {
-          font-size: 20px;
-          position: absolute;
-          left: 20px;
-          transition: all 0.2s ease-in-out;
+        .inline-text {
+          color: #484848;
+          font-size: 0.75rem;
+          line-height: 1.5;
+          display: flex;
         }
+      }
 
-        input {
-          width: 100%;
-          height: 70px;
-          border: 0;
-          font-size: 25px;
-          outline: none;
+      .pw-form-field {
+        margin-bottom: 0 !important;
+        .pw-input-wrap {
+          margin-bottom: 0.625rem;
+          position: relative;
+          display: block;
+          padding: 0;
+          input {
+            display: block;
+            width: 440px;
+            margin: 0;
+            outline: 0;
+            padding: 1.5rem 0 0 0.0625rem;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #929292;
+            appearance: none;
+            transition: box-shadow 0.2s;
+            font-size: 1rem;
+            line-height: 1.5;
+            box-sizing: border-box;
+          }
+          input:focus {
+            box-shadow: 0 1px 0 #0058a3;
+            border-bottom-color: #0058a3;
+            color: #0058a3;
+          }
+          input ~ label {
+            font-size: 1rem;
+            transition: all 0.2s ease-in-out;
+            transform-origin: top left;
+            pointer-events: none;
+            position: absolute;
+            top: 1.4375rem;
+            display: inline-block;
+            color: #484848;
+          }
+          input:focus ~ label {
+            transform: translateY(-1.4375rem) scale(0.75);
+            pointer-events: all;
+          }
+
+          .visiblePassword {
+            position: absolute;
+            right: 5px;
+            top: 25px;
+            padding: 0;
+            border: none;
+            width: fit-content;
+            height: fit-content;
+            background-color: unset;
+
+            i {
+              font-size: 15px;
+              color: black;
+            }
+          }
+        }
+        .labelled {
+          input ~ label {
+            transform: translateY(-1.4375rem) scale(0.75);
+            pointer-events: all;
+          }
+        }
+        .inline-text {
+          color: #484848;
+          font-size: 0.75rem;
+          line-height: 1.5;
+          display: flex;
+        }
+      }
+      .error {
+        .id-input-wrap,
+        .pw-input-wrap {
+          input {
+            border-bottom-color: #e00751;
+            box-shadow: 0 1px 0 #e00751;
+          }
+          // border-bottom-color: #e00751;
+          input:focus {
+            border-bottom-color: #e00751;
+            box-shadow: 0 1px 0 #e00751;
+            color: #111111;
+          }
+        }
+        .inline-text {
+          color: #e00751;
         }
       }
 
