@@ -153,7 +153,15 @@ export default function Signup() {
       }
     }
     // TODO: 추후에 다른 페이지 완성되면 수정 후 확인 예정
-    fetch('http://10.58.2.75:8000/users/signup', {
+    let loginGender;
+    if (signupValues.gender === '남자') {
+      loginGender = 1;
+    } else if (signupValues.gender === '여자') {
+      loginGender = 2;
+    } else {
+      loginGender = 3;
+    }
+    fetch('http://10.58.4.134:8000/users/signup', {
       method: 'POST',
       body: JSON.stringify({
         full_name: signupValues.userName,
@@ -162,14 +170,16 @@ export default function Signup() {
         membership: signupValues.familySignup,
         address: signupValues.address,
         phone_number: signupValues.phoneNumber,
-        gender_id: 1,
+        gender_id: loginGender,
       }),
     })
-      .then(response => response.json())
+      // 백에서 json Response 보내면 아래 코드 필요, http Response면 불필요
+      // .then(response => response.json())
       .then(result => {
-        if (result.message === 'SUCCESS') {
-          navigate('/');
-        }
+        console.log(result);
+        // if (result.status === 201) {
+        //   navigate('/');
+        // }
       });
   };
 

@@ -1,0 +1,20 @@
+@import '../../styles/mixin.scss';
+
+.cart {
+  margin-top: 64px;
+  padding: 0 48px;
+
+  .emptyCart {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+
+    .emptyCartTitle {
+      font-size: 24px;
+    }
+  }
+
+  .unloginMember {
+    margin: 40px 0;
+  }
+}
