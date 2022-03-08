@@ -63,9 +63,9 @@
       height: 600px;
       @include flexBox(space-around, center, column);
 
-      .id-form-field {
-        margin-bottom: 0 !important;
-        .id-input-wrap {
+      .idField {
+        margin-bottom: 0;
+        .idInputWrap {
           margin-bottom: 0.625rem;
           position: relative;
           display: block;
@@ -111,7 +111,7 @@
             pointer-events: all;
           }
         }
-        .inline-text {
+        .inlineText {
           color: #484848;
           font-size: 0.75rem;
           line-height: 1.5;
@@ -119,9 +119,9 @@
         }
       }
 
-      .pw-form-field {
-        margin-bottom: 0 !important;
-        .pw-input-wrap {
+      .pwField {
+        margin-bottom: 0;
+        .pwInputWrap {
           margin-bottom: 0.625rem;
           position: relative;
           display: block;
@@ -183,7 +183,7 @@
             pointer-events: all;
           }
         }
-        .inline-text {
+        .inlineText {
           color: #484848;
           font-size: 0.75rem;
           line-height: 1.5;
@@ -191,8 +191,8 @@
         }
       }
       .error {
-        .id-input-wrap,
-        .pw-input-wrap {
+        .idInputWrap,
+        .pwInputWrap {
           input {
             border-bottom-color: #e00751;
             box-shadow: 0 1px 0 #e00751;
@@ -204,7 +204,7 @@
             color: #111111;
           }
         }
-        .inline-text {
+        .inlineText {
           color: #e00751;
         }
       }

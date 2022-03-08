@@ -7,7 +7,7 @@ export default function Login() {
 
   const [userId, setUserId] = useState('');
   const [errorMsgId, setErrorMsgId] = useState('');
-  const [userPassword, SetUserPassword] = useState('');
+  const [userPassword, setUserPassword] = useState('');
   const [errorMsgPassword, setErrorMsgPassword] = useState('');
 
   const passwordInput = useRef();
@@ -17,7 +17,7 @@ export default function Login() {
   };
 
   const handlePasswordInput = e => {
-    SetUserPassword(e.target.value);
+    setUserPassword(e.target.value);
   };
 
   const handleBlurUserId = e => {
@@ -28,7 +28,7 @@ export default function Login() {
     }
   };
   const handleBlurUserPassword = e => {
-    if (userPassword.length <= 8) {
+    if (userPassword.length < 8) {
       setErrorMsgPassword('비밀번호는 최소 8 자 이상을 입력해야 합니다.');
     } else {
       setErrorMsgPassword('');
@@ -54,12 +54,12 @@ export default function Login() {
     }
   };
 
-  const loginValied = userId.length > 0 && userPassword.length > 8;
+  const loginValid = userId.length > 0 && userPassword.length >= 8;
 
   const handleLogin = e => {
     e.preventDefault();
-    if (loginValied) {
-      fetch('http://10.58.2.75:8000/users/login', {
+    if (loginValid) {
+      fetch('http://10.58.4.134:8000/users/login', {
         method: 'POST',
         body: JSON.stringify({
           email: userId,
@@ -70,7 +70,7 @@ export default function Login() {
         .then(res => {
           if (res.access_token) {
             localStorage.setItem('token', res.access_token);
-            navigate(-1);
+            navigate('/');
           } else {
             alert('이메일과 비밀번호를 확인해주세요.');
           }
@@ -103,43 +103,39 @@ export default function Login() {
       </div>
       <div className="backWhite">
         <form className="loginGate" onSubmit={handleLogin}>
-          <div
-            className={`id-form-field ${errorMsgId.length > 0 ? 'error' : ''}`}
-          >
+          <div className={`idField ${errorMsgId.length > 0 ? 'error' : ''}`}>
             <div
-              className={`id-input-wrap ${userId.length > 0 ? 'labelled' : ''}`}
+              className={`idInputWrap ${userId.length > 0 ? 'labelled' : ''}`}
             >
               <input
-                id="input-user-id"
+                id="inputUserId"
                 value={userId}
                 onChange={handleIdInput}
                 onBlur={handleBlurUserId}
               />
-              <label htmlFor="input-user-id">이메일</label>
+              <label htmlFor="inputUserId">이메일</label>
             </div>
             <div className="inline-text">
               <span>{errorMsgId}</span>
             </div>
           </div>
           <div
-            className={`pw-form-field ${
-              errorMsgPassword.length > 0 ? 'error' : ''
-            }`}
+            className={`pwField ${errorMsgPassword.length > 0 ? 'error' : ''}`}
           >
             <div
-              className={`pw-input-wrap ${
+              className={`pwInputWrap ${
                 userPassword.length > 0 ? 'labelled' : ''
               }`}
             >
               <input
-                id="input-user-pw"
+                id="inputUserPw"
                 type="password"
                 value={userPassword}
                 onChange={handlePasswordInput}
                 onBlur={handleBlurUserPassword}
                 ref={passwordInput}
               />
-              <label htmlFor="input-user-pw">비밀번호</label>
+              <label htmlFor="inputUserPw">비밀번호</label>
               <button
                 type="button"
                 className="visiblePassword"
@@ -148,7 +144,7 @@ export default function Login() {
                 <i className="far fa-solid fa-eye" />
               </button>
             </div>
-            <div className="inline-text">
+            <div className="inlineText">
               <span>{errorMsgPassword}</span>
             </div>
           </div>
