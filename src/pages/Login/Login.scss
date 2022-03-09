@@ -1,1 +1,230 @@
-// Hello
+@import '../../styles/mixin.scss';
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  .backBlue {
+    width: 665px;
+    background-color: #0158a3;
+    @include flexBox(space-between, center, column);
+
+    .backBlueNav {
+      height: 65px;
+      @include flexBox(space-around, center);
+
+      .logo {
+        width: 90px;
+        height: 36px;
+        background-color: #ffffff;
+
+        .logoInside {
+          @include flexBox(center);
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          color: #ffffff;
+          font-weight: 1000;
+          background-color: #0158a3;
+        }
+      }
+    }
+
+    .backBlueMain {
+      height: 75px;
+
+      h1 {
+        font-size: 40px;
+        font-weight: bold;
+        color: yellow;
+      }
+
+      p {
+        padding-top: 30px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+      }
+    }
+
+    .backBlueFooter {
+      height: 65px;
+      color: white;
+    }
+  }
+
+  .backWhite {
+    width: 1065px;
+    background-color: #ffffff;
+    @include flexBox(center, center);
+
+    .loginGate {
+      height: 600px;
+      @include flexBox(space-around, center, column);
+
+      .idField {
+        margin-bottom: 0;
+        .idInputWrap {
+          margin-bottom: 0.625rem;
+          position: relative;
+          display: block;
+          padding: 0;
+          input {
+            display: block;
+            width: 440px;
+            margin: 0;
+            outline: 0;
+            padding: 1.5rem 0 0 0.0625rem;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #929292;
+            appearance: none;
+            transition: box-shadow 0.2s;
+            font-size: 1rem;
+            line-height: 1.5;
+            box-sizing: border-box;
+          }
+          input:focus {
+            box-shadow: 0 1px 0 #0058a3;
+            border-bottom-color: #0058a3;
+            color: #0058a3;
+          }
+          input ~ label {
+            font-size: 1rem;
+            transition: all 0.2s ease-in-out;
+            transform-origin: top left;
+            pointer-events: none;
+            position: absolute;
+            top: 1.4375rem;
+            display: inline-block;
+            color: #484848;
+          }
+          input:focus ~ label {
+            transform: translateY(-1.4375rem) scale(0.75);
+            pointer-events: all;
+          }
+        }
+        .labelled {
+          input ~ label {
+            transform: translateY(-1.4375rem) scale(0.75);
+            pointer-events: all;
+          }
+        }
+        .inlineText {
+          color: #484848;
+          font-size: 0.75rem;
+          line-height: 1.5;
+          display: flex;
+        }
+      }
+
+      .pwField {
+        margin-bottom: 0;
+        .pwInputWrap {
+          margin-bottom: 0.625rem;
+          position: relative;
+          display: block;
+          padding: 0;
+          input {
+            display: block;
+            width: 440px;
+            margin: 0;
+            outline: 0;
+            padding: 1.5rem 0 0 0.0625rem;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #929292;
+            appearance: none;
+            transition: box-shadow 0.2s;
+            font-size: 1rem;
+            line-height: 1.5;
+            box-sizing: border-box;
+          }
+          input:focus {
+            box-shadow: 0 1px 0 #0058a3;
+            border-bottom-color: #0058a3;
+            color: #0058a3;
+          }
+          input ~ label {
+            font-size: 1rem;
+            transition: all 0.2s ease-in-out;
+            transform-origin: top left;
+            pointer-events: none;
+            position: absolute;
+            top: 1.4375rem;
+            display: inline-block;
+            color: #484848;
+          }
+          input:focus ~ label {
+            transform: translateY(-1.4375rem) scale(0.75);
+            pointer-events: all;
+          }
+
+          .visiblePassword {
+            position: absolute;
+            right: 5px;
+            top: 25px;
+            padding: 0;
+            border: none;
+            width: fit-content;
+            height: fit-content;
+            background-color: unset;
+
+            i {
+              font-size: 15px;
+              color: black;
+            }
+          }
+        }
+        .labelled {
+          input ~ label {
+            transform: translateY(-1.4375rem) scale(0.75);
+            pointer-events: all;
+          }
+        }
+        .inlineText {
+          color: #484848;
+          font-size: 0.75rem;
+          line-height: 1.5;
+          display: flex;
+        }
+      }
+      .error {
+        .idInputWrap,
+        .pwInputWrap {
+          input {
+            border-bottom-color: #e00751;
+            box-shadow: 0 1px 0 #e00751;
+          }
+          // border-bottom-color: #e00751;
+          input:focus {
+            border-bottom-color: #e00751;
+            box-shadow: 0 1px 0 #e00751;
+            color: #111111;
+          }
+        }
+        .inlineText {
+          color: #e00751;
+        }
+      }
+
+      button {
+        width: 440px;
+        height: 70px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffffff;
+        border-radius: 35px;
+        border: 0;
+        background-color: #0158a3;
+        cursor: pointer;
+
+        &.signUpBtn {
+          color: #000000;
+          background-color: #dfdfdf;
+        }
+      }
+    }
+  }
+}
