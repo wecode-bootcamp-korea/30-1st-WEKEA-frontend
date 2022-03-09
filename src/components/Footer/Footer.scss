@@ -1,0 +1,11 @@
+@import '../../styles/mixin.scss';
+.footerBox {
+  width: 100vw;
+  background-color: #f5f5f5;
+  .listBox {
+    @include flexBox(space-around, center, row);
+  }
+  .infoBox {
+    @include flexBox(space-around, center, row);
+  }
+}
