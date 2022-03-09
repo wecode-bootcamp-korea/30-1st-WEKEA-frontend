@@ -19,7 +19,6 @@ export default function ItemDetailAside() {
       </div>
       <div className="asideBoxBtn">
         <button className="buyBtn">구매하기</button>
-        <button className="addCartBtn">하트</button>
       </div>
       <div className="asideBoxInfo">
         <div className="itemStock">

@@ -2,49 +2,41 @@
 
 .asideBox {
   position: sticky;
-  height: 350px; //--> sticky가 적용될 요소는 꼭 height값이 있어야 함 position: sticky; top: 0; //--> sticky 상단의 offset 0으로 부터 적용됨
-  top: 0; //--> sticky 상단의 offset 0으로 부터 적용됨
+  height: 350px;
+  top: 0;
 
   @include flexBox(center, center, column);
 
   .asideBoxNav {
     @include flexBox(center, top, row);
-    background-color: wheat;
+    border-bottom: 1px solid #dfdfdf;
 
     .ItemName {
+      padding-top: 10px;
       width: 330px;
       height: 100px;
-      background-color: #0158a3;
     }
 
     .ItemPrice {
+      padding-top: 10px;
       width: 130px;
       height: 100px;
-      background-color: aquamarine;
     }
   }
 
   .asideBoxBtn {
     @include flexBox(space-around, center, row);
-    gap: 20px;
+    padding-top: 20px;
 
     .buyBtn {
-      width: 350px;
+      width: 400px;
       height: 60px;
       border-radius: 35px;
       border: 0;
+      font-size: 15px;
+      font-weight: bold;
       color: #ffffff;
       background-color: #0158a3;
-      cursor: pointer;
-    }
-
-    .addCartBtn {
-      width: 60px;
-      height: 60px;
-      border: 1px solid #bcbcbc;
-      background-color: #ffffff;
-      border-radius: 50%;
-      border: 1px solid #dfdfdf;
       cursor: pointer;
     }
   }
@@ -53,20 +45,24 @@
     width: 460px;
     height: 150px;
     @include flexBox(center, start, column);
-    background-color: yellow;
     gap: 5px;
 
     .itemStock {
       @include flexBox(center, start, column);
-      background-color: aqua;
+      border-bottom: 1px solid #dfdfdf;
+
       .itemStockIcon {
         @include flexBox(center, start, row);
-        background-color: #0158a3;
+        font-size: 15px;
+        color: gray;
+        padding-bottom: 7px;
       }
       .itemStockState {
+        width: 460px;
+        font-size: 15px;
+        color: gray;
         background-color: #ffffff;
-        border-bottom: 1px solid #dfdfdf;
-        width: 440px;
+        padding-bottom: 10px;
       }
     }
     .remainStock {

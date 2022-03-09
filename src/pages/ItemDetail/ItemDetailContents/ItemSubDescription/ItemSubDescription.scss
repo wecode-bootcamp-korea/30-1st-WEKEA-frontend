@@ -55,8 +55,13 @@
       padding: 16px;
       margin-top: 20px;
 
+      .itemDescription {
+        padding-bottom: 10px;
+        font-size: 17px;
+        font-weight: bold;
+      }
+
       .itemNumList {
-        background-color: tan;
         width: 87px;
         height: 18px;
         font-size: 10px;
@@ -70,6 +75,41 @@
         color: white;
         font-size: 10px;
         font-weight: bold;
+      }
+    }
+
+    footer {
+      padding: 16px;
+
+      details {
+        padding: 0.5em 0.5em 0;
+        margin-bottom: 1em;
+      }
+
+      summary {
+        font-weight: bold;
+        margin: -0.5em -0.5em 0;
+        padding: 0.5em;
+        cursor: pointer;
+      }
+
+      summary::marker {
+        content: '+ ';
+        font-family: monospace;
+      }
+
+      details[open] summary::marker {
+        content: '- ';
+      }
+
+      details[open] {
+        padding: 0.5em;
+      }
+
+      details[open] summary {
+        margin-bottom: 0.5em;
+        background-color: #0158a3;
+        color: #fbd914;
       }
     }
   }
