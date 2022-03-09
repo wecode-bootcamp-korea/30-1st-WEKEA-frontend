@@ -1,22 +1,23 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './SelectionWrap.scss';
 
-export function SelectionWrap({
-  price,
-  startList,
-  store,
-  color,
-  stock,
+export default function SelectionWrap({
   newData,
+  sort,
+  size,
+  colorList,
+  isFilter,
+  sortButton,
+  sizeButton,
+  colorButton,
 }) {
   const [btnVisible, setbtnVisible] = useState('');
-  const [sort, setSort] = useState('');
-  const [size, setSize] = useState('');
-  const [colorList, setColorList] = useState([]);
-  const [categoryId, setCategoryId] = useState(1);
-  const [isFilter, setIsFilter] = useState(true);
-
-  function show(e) {
+  // const [sort, setSort] = useState('');
+  // const [size, setSize] = useState('');
+  // const [colorList, setColorList] = useState([]);
+  // // const [categoryId, setCategoryId] = useState(1);
+  // const [isFilter, setIsFilter] = useState(true);
+  function dropboxAble(e) {
     if (e.target.value !== btnVisible) {
       setbtnVisible(e.target.value);
     } else {
@@ -24,57 +25,54 @@ export function SelectionWrap({
     }
   }
 
-  function sortButton(e) {
-    setIsFilter(false);
-    setSort(e.target.value);
-    console.log(e.target.value);
-  }
+  // function sortButton(e) {
+  //   setIsFilter(false);
+  //   setSort(e.target.value);
+  //   console.log(e.target.value);
+  // }
 
-  function sizeButton(e) {
-    setIsFilter(false);
-    setSize(e.target.value);
-    console.log(e.target.value);
-  }
+  // function sizeButton(e) {
+  //   setIsFilter(false);
+  //   setSize(e.target.value);
+  //   console.log(e.target.value);
+  // }
 
-  function colorButton(e) {
-    setIsFilter(false);
-    console.log(e.target.value);
-    console.log(e.target.checked);
-    if (e.target.checked) {
-      setColorList(colorList.concat(e.target.value));
-      console.log(colorList);
-    }
+  // function colorButton(e) {
+  //   setIsFilter(false);
+  //   console.log(e.target.value);
+  //   console.log(e.target.checked);
+  //   if (e.target.checked) {
+  //     setColorList(colorList.concat(e.target.value));
+  //     console.log(colorList);
+  //   }
 
-    if (!e.target.checked) {
-      setColorList(colorList.filter(element => element !== e.target.value));
-      console.log(colorList);
-    }
-  }
+  //   if (!e.target.checked) {
+  //     setColorList(colorList.filter(element => element !== e.target.value));
+  //     console.log(colorList);
+  //   }
+  // }
 
+  function tests() {}
   function submitBtn() {
-    fetch('/data/itemList.json', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        sub_category_id: categoryId,
-        filter_boolean: isFilter,
-        sort: sort,
-        limit: 10,
-        offset: 0,
-        size: size,
-        color: colorList,
-        // min_price
-        // max_price
-        // discount
-      }),
-    })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-      });
-    console.log(newData);
+    // history.push({
+    //   filter_boolean: isFilter,
+    //   sort: sort,
+    //   limit: 10,
+    //   offset: 0,
+    //   size: size,
+    //   color: colorList,
+    // });
+    // // sub_category_id: categoryId,
+    // filter_boolean: isFilter,
+    // sort: sort,
+    // limit: 10,
+    // offset: 0,
+    // size: size,
+    // color: colorList,
+    // // min_price
+    // max_price
+    // discount
+    console.log();
   }
 
   return (
@@ -87,7 +85,7 @@ export function SelectionWrap({
             }
             type="select"
             value="1"
-            onClick={show}
+            onClick={dropboxAble}
           >
             정렬<span>&#709;</span>
           </button>
@@ -149,7 +147,7 @@ export function SelectionWrap({
             }
             type="select"
             value="2"
-            onClick={show}
+            onClick={dropboxAble}
           >
             지점<span>&#709;</span>
           </button>
@@ -187,7 +185,7 @@ export function SelectionWrap({
             }
             type="select"
             value="3"
-            onClick={show}
+            onClick={dropboxAble}
           >
             특별할인
           </button>
@@ -199,7 +197,7 @@ export function SelectionWrap({
             }
             type="select"
             value="4"
-            onClick={show}
+            onClick={dropboxAble}
           >
             가격<span>&#709;</span>
           </button>
@@ -225,7 +223,7 @@ export function SelectionWrap({
             }
             type="select"
             value="5"
-            onClick={show}
+            onClick={dropboxAble}
           >
             색상<span>&#709;</span>
           </button>
@@ -314,7 +312,7 @@ export function SelectionWrap({
             }
             type="select"
             value="6"
-            onClick={show}
+            onClick={dropboxAble}
           >
             사이즈<span>&#709;</span>
           </button>
@@ -375,7 +373,9 @@ export function SelectionWrap({
         <button className="informationBtn" onClick={submitBtn}>
           적용
         </button>
-        <button className="informationBtn">초기화</button>
+        <button className="informationBtn" onClick={tests}>
+          초기화
+        </button>
       </div>
     </div>
   );

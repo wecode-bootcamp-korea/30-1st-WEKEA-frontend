@@ -2,7 +2,14 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductionItem.scss';
 
-export function ProductionItem({ title, src, price, starList, store, color }) {
+export default function ProductionItem({
+  title,
+  src,
+  price,
+  starList,
+  store,
+  color,
+}) {
   const [star, setStar] = useState('');
   const [storeNull, setStoreNull] = useState([]);
 
@@ -65,7 +72,7 @@ export function ProductionItem({ title, src, price, starList, store, color }) {
             return <div key={idx} className={el} id="color" name="colors" />;
           })}
         </div>
-        <p className="sellStore">보유 지점: {store + ''}</p>
+        <p className={storeNull}>보유 지점: {store + ''}</p>
       </div>
     </div>
   );
