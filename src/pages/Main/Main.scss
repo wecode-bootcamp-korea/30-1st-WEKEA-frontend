@@ -1,3 +1,39 @@
-.hh1 {
-  font-size: 500px;
+@import '../../styles/mixin.scss';
+
+.saleProductHeader {
+  @include flexBox(space-between, center);
+  width: 1200px;
+
+  .saleProductComment {
+    line-height: 37px;
+
+    .saleProductTitle {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    span {
+      font-size: 14px;
+      color: #484848;
+    }
+  }
+
+  .saleProductMoreBtn {
+    padding: 0 1.5rem;
+    height: 2.5rem;
+    border: 1px solid #dfdfdf;
+    border-radius: 64px;
+    background-color: white;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #ccc;
+    }
+  }
+}
+
+.saleProductList {
+  display: flex;
+  position: absolute;
 }
