@@ -6,6 +6,7 @@ import Signup from './pages/Signup/Signup';
 import Login from './pages/Login/Login';
 import ItemList from './pages/ItemList/ItemList';
 import ItemDetail from './pages/ItemDetail/ItemDetail';
+import Footer from './components/Footer/Footer';
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
         <Route path="/itemlist" element={<ItemList />} />
         <Route path="/itemdetail" element={<ItemDetail />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
