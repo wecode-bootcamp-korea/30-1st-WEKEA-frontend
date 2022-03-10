@@ -1,0 +1,141 @@
+@import '../../../styles/mixin.scss';
+
+.signupInput {
+  position: relative;
+  color: #484848;
+
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  .wrapper {
+    position: relative;
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid gray;
+    transition: all 0.2s ease-in-out;
+
+    &:focus-within {
+      padding-bottom: 0;
+      border-bottom: 2px solid #0058a3;
+
+      input {
+        color: #0058a3;
+
+        &::placeholder {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .defaultInternationalCode {
+      margin-right: 20px;
+      color: black;
+      transform: translateY(5px);
+      white-space: nowrap;
+    }
+
+    .placeholder {
+      position: absolute;
+      top: 40%;
+      left: 0;
+      transform: translateY(50%);
+      font-size: 1rem;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .placeholderTranslate {
+      transform: translateY(-14px);
+      font-size: 0.5rem;
+    }
+
+    .genderSeloctor {
+      all: unset;
+      width: 100%;
+      height: 24px;
+    }
+
+    input {
+      all: unset;
+      width: 100%;
+      height: 24px;
+      color: black;
+      transition: all 0.2s ease-in-out;
+
+      &::placeholder {
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+    .errorMessage {
+      position: absolute;
+      top: 60px;
+      color: #e00751;
+      font-size: 12px;
+    }
+
+    .fa-angle-down {
+      position: absolute;
+      right: 5px;
+      font-size: 20px;
+      align-self: center;
+      pointer-events: none;
+    }
+  }
+
+  .notPhonenumberOrGender {
+    &:focus-within {
+      padding-bottom: 0;
+      border-bottom: 2px solid #0058a3;
+
+      .placeholder {
+        transform: translateY(-14px);
+        font-size: 0.5rem;
+      }
+    }
+  }
+
+  .signupInputValid {
+    padding-bottom: 0;
+    border-bottom: 2px solid #e00751;
+
+    &:focus-within {
+      border-bottom: 2px solid #e00751;
+
+      .placeholder {
+        transform: translateY(-14px);
+        font-size: 0.5rem;
+      }
+    }
+  }
+
+  .signupInputBtn {
+    all: unset;
+    @include flexBox(center);
+    width: 160px;
+    height: 56px;
+    margin-bottom: 20px;
+    border-radius: 28px;
+    color: white;
+    background-color: #0058a3;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #004f93;
+    }
+  }
+  .visiblePassword {
+    position: absolute;
+    top: 30px;
+    right: 5px;
+    padding: 0;
+    border: none;
+    background-color: unset;
+    font-size: 17px;
+    cursor: pointer;
+  }
+}

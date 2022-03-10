@@ -1,0 +1,37 @@
+[
+  {
+    "message": "SUCCESS",
+    "result": [
+      {
+        "name": "MARKUS 마르쿠스",
+        "price": 199000,
+        "description": "의자의 각도와 높이를 마음대로 조절할 수 있어 오랫동안 편하게 앉을 수 있습니다. 메시 소재의 등받이 덕분에 공기가 잘 순환되어 바쁠 때도 상쾌하게 일할 수 있어요. 오래 곁에 두고 사용할 수 있도록 튼튼하게 제작된 제품입니다.",
+        "average_rating": 5.0,
+        "image_list": [
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+        ],
+        "store_list": ["광명점", "기흥점", "고양점", "동부산점"],
+        "color_list": ["solid wood", "black", "blue", "white"],
+        "size_list": ["L", "M", "XL"]
+      },
+      {
+        "name": "평범한 사무용의자",
+        "price": 150000,
+        "description": "매우 평범하고 무난함",
+        "average_rating": null,
+        "image_list": [
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1MSZ7LB9WeMvCaCF2s4e05tYTd9JUyDafQ&usqp=CAU"
+        ],
+        "store_list": [],
+        "color_list": [],
+        "size_list": []
+      }
+    ]
+  }
+]
