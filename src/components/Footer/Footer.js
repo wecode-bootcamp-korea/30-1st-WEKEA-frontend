@@ -1,5 +1,6 @@
 import React from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import FooterList from './component/FooterList';
 import './Footer.scss';
 
 export default function Footer() {
@@ -9,126 +10,121 @@ export default function Footer() {
     navigate('/signup');
   };
 
+  const FOOTER_LIST_DATA = [
+    {
+      title: '고객문의',
+      list: [
+        '고객지원',
+        '자주 묻는 질문',
+        '문의하기',
+        '배송조회',
+        '교환환불',
+        '품질보증',
+        '제품리콜',
+        '피드백',
+        '부품신청',
+      ],
+    },
+    {
+      title: '쇼핑하기',
+      list: [
+        '쇼핑하기',
+        '전화 주문',
+        '이케해여? for Business',
+        '셀프 플래닝',
+        '이케해여? 모바일 앱',
+        '제품 사용 팁/가이드',
+        '결제 옵션',
+        '기프트 카드',
+      ],
+    },
+    {
+      title: '서비스',
+      list: [
+        '이케해여? 서비스',
+        '배송 서비스',
+        '조립 서비스',
+        '설치 서비스',
+        '주방 서비스',
+        '플래닝 서비스',
+        '인테리어 디자인 서비스',
+        '바이백 서비스',
+      ],
+    },
+    {
+      title: '이케해여? 이야기',
+      list: [
+        '브랜드 소개',
+        '집에서의 삶',
+        '지속가능한 생활',
+        '내가 아끼는 집, 나를 아끼는 집',
+        '뉴스룸',
+        '채용정보',
+      ],
+    },
+  ];
+
   return (
     <div className="footerBox">
       <div className="listBox">
         <div className="listBoxSignUp">
-          <h1>IKEHEAYO Family</h1>
-          <p>
-            지금 IKEA Family에 무료로 가입하고 다양한 멤버 전용 혜택을 누리세요.
-          </p>
-          <button onClick={goToSignUp}>IKEHEAYO Family 가입하기</button>
+          <h1>이케해여? Family</h1>
+          <p>지금 IKEA Family에 무료로 가입하고</p>
+          <p>다양한 멤버 전용 혜택을 누리세요.</p>
+          <p className="underLine">자세히 보기</p>
+          <button onClick={goToSignUp}>이케해여? Family 가입하기</button>
         </div>
         <div className="listBoxlist">
-          <ul>
-            <h3>고객문의</h3>
-            <li>
-              <Link to="/">김 산</Link>
-            </li>
-            <li>
-              <Link to="/">김광일</Link>
-            </li>
-            <li>
-              <Link to="/">조진목</Link>
-            </li>
-            <li>
-              <Link to="/">안광민</Link>
-            </li>
-            <li>
-              <Link to="/">유강호</Link>
-            </li>
-          </ul>
-          <ul>
-            <h3>쇼핑하기</h3>
-            <li>
-              <Link to="/">김 산</Link>
-            </li>
-            <li>
-              <Link to="/">김광일</Link>
-            </li>
-            <li>
-              <Link to="/">조진목</Link>
-            </li>
-            <li>
-              <Link to="/">안광민</Link>
-            </li>
-            <li>
-              <Link to="/">유강호</Link>
-            </li>
-          </ul>
-          <ul>
-            <h3>서비스</h3>
-            <li>
-              <Link to="/">김 산</Link>
-            </li>
-            <li>
-              <Link to="/">김광일</Link>
-            </li>
-            <li>
-              <Link to="/">조진목</Link>
-            </li>
-            <li>
-              <Link to="/">안광민</Link>
-            </li>
-            <li>
-              <Link to="/">유강호</Link>
-            </li>
-          </ul>
-
-          <ul>
-            <h3>IKEHEAYO? 이야기</h3>
-            <li>
-              <Link to="/">김 산</Link>
-            </li>
-            <li>
-              <Link to="/">김광일</Link>
-            </li>
-            <li>
-              <Link to="/">조진목</Link>
-            </li>
-            <li>
-              <Link to="/">안광민</Link>
-            </li>
-            <li>
-              <Link to="/">유강호</Link>
-            </li>
-          </ul>
+          {FOOTER_LIST_DATA.map((data, index) => {
+            return <FooterList key={index} data={data} />;
+          })}
+        </div>
+      </div>
+      <div className="footerBtns">
+        <div className="sns">
+          <button>
+            <i className="fa fa-brands fa-facebook" />
+          </button>
+          <button>
+            <i className="fa fa-brands fa-instagram" />
+          </button>
+          <button>
+            <i className="fa fa-brands fa-youtube" />
+          </button>
+        </div>
+        <div className="national">
+          <button>
+            <i className="fas fa-regular fa-globe" />
+            국가 변경
+          </button>
+          <button>
+            한국어
+            <i className="fas fa-regular fa-angle-down" />
+          </button>
         </div>
       </div>
       <div className="infoBox">
-        <div className="infoUp">
-          <div className="infoMain">
+        <div className="infoMain">
+          <div className="infoList">
             <p>© Inter IKEHEAYO Systems K.A 2022-2222</p>
-            <div className="infoAddress">
-              <p>
-                IKEHEAYO 코리아 주소 : (우) 06159 서울 강남구 테헤란로 427
-                위워크타워 10층
-              </p>
-              <p>사업자 등록번호 : 12345678910</p>
-              <p>대표자 : 김 산</p>
-              <p>통신판매업 신고 : 2022-서울-0306</p>
-              <p>TEL : 1234-5678</p>
-            </div>
+            <ul>
+              <li>개인정보처리방침</li>
+              <li>쿠키 정책</li>
+              <li>쿠키 설정</li>
+              <li>웹사이트 이용약관</li>
+              <li>Responsible disclosure</li>
+            </ul>
           </div>
-        </div>
-        <div className="infoList">
-          <ul>
-            <li>
-              <Link to="/">김 산</Link>
-            </li>
-            <li>
-              <Link to="/">김광일</Link>
-            </li>
-            <li>
-              <Link to="/">조진목</Link>
-            </li>
-            <li>
-              <Link to="/">안광민</Link>
-            </li>
-            <li>
-              <Link to="/">유강호</Link>
-            </li>
-          </ul>
+          <div className="infoAddress">
+            <p>
+              이케해여? 주소 : (우) 06159 서울 강남구 테헤란로 427 위워크타워
+              10층
+            </p>
+            <p>사업자 등록번호 : 12345678910</p>
+            <p>대표자 : 김 산</p>
+            <p>통신판매업 신고 : 2022-서울-0306</p>
+            <p>TEL : 1234-5678</p>
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import Footer from '../../components/Footer/Footer';
 import ItemDetailContents from './ItemDetailContents/ItemDetailContents';
 import ItemDetailAside from './ItemDetailAside/ItemDetailAside';
 
@@ -29,6 +29,7 @@ export default function ItemDetail() {
             <ItemDetailAside itemData={itemData} />
           </div>
         </div>
+        <Footer />
       </div>
     )
   );

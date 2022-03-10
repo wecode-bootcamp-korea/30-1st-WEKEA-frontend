@@ -23,8 +23,14 @@ export default function ItemDetailAside({ itemData }) {
         product_id: itemData.id,
       }),
     })
-      .then(res => res.json())
-      .then(result => console.log(result));
+      // .then(res => res.json())
+      .then(result => {
+        if (result.status === 201) {
+          alert('장바구니에 추가됐습니다.');
+        } else {
+          alert('재고가 부족합니다.');
+        }
+      });
   };
 
   return (

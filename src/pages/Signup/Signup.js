@@ -161,7 +161,7 @@ export default function Signup() {
     } else {
       loginGender = 3;
     }
-    fetch('http://10.58.6.205:8000/users/signup', {
+    fetch('http://10.58.7.75:8000/users/signup', {
       method: 'POST',
       body: JSON.stringify({
         full_name: signupValues.userName,
@@ -174,10 +174,9 @@ export default function Signup() {
       }),
     })
       // 백에서 json Response 보내면 아래 코드 필요, http Response면 불필요
-      .then(response => response.json())
+      // .then(response => response.json())
       .then(result => {
-        if (result.access_token) {
-          localStorage.setItem('access_token', result.access_token);
+        if (result.status === 201) {
           navigate('/');
         } else {
           alert('이메일이 이미 존재합니다.');

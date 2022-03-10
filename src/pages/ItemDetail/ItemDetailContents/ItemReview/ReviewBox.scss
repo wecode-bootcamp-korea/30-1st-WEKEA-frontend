@@ -11,6 +11,6 @@
 
   .reviewercomment {
     padding: 30px;
-    @include flexBox(start, center, row);
+    @include flexBox(flex-start, center, row);
   }
 }

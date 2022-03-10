@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import './CartSidebar.scss';
 
 export default function CartSidebar({ totalPrice }) {
+  const navigate = useNavigate();
+
   const clickBuyBtn = () => {
     fetch('http://10.58.7.75:8000/users/cart', {
       method: 'post',
@@ -13,7 +15,9 @@ export default function CartSidebar({ totalPrice }) {
     })
       // .then(response => response.json())
       .then(result => {
-        console.log(result);
+        if (result.status === 201) {
+          navigate('/');
+        }
       });
   };
 

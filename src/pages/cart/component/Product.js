@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import './Product.scss';
 
-export default function Product({ data, changeCountBtn }) {
+export default function Product({ data, changeCountBtn, deleteCartData }) {
   const {
     cart_id,
     color,
@@ -34,7 +34,6 @@ export default function Product({ data, changeCountBtn }) {
     //       alert('재고가 부족합니다.');
     //     }
     //   });
-
     changeCountBtn(e, data);
   };
 
@@ -47,7 +46,12 @@ export default function Product({ data, changeCountBtn }) {
       body: JSON.stringify({
         cart_id: cart_id,
       }),
-    }).then(response => console.log(response.status === 204));
+    }).then(response => {
+      if (response.status === 204) {
+        deleteCartData(data);
+      }
+    });
+    // deleteCartData(data);
   };
 
   const dotPrice = price => {

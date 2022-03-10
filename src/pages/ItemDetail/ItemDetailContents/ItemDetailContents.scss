@@ -1,7 +1,7 @@
 @import '../../../styles/mixin.scss';
 
 .contentsBox {
-  @include flexBox(center, start, column);
+  @include flexBox(center, flex-start, column);
 
   .itemImg {
     @include flexBox(space-between, center, row);
@@ -10,7 +10,7 @@
   }
 
   .itemDescriptionBox {
-    @include flexBox(center, start, column);
+    @include flexBox(center, flex-start, column);
     width: 590px;
     padding-bottom: 10px;
     font-size: 20px;
@@ -18,7 +18,7 @@
     .itemNumList {
       width: 87px;
       height: 18px;
-      @include flexBox(start, center, row);
+      @include flexBox(flex-start, center, row);
       font-size: 10px;
     }
 

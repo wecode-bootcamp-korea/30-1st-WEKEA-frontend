@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Login.scss';
 
 export default function Login() {
@@ -59,7 +59,7 @@ export default function Login() {
   const handleLogin = e => {
     e.preventDefault();
     if (loginValid) {
-      fetch('http://10.58.4.134:8000/users/login', {
+      fetch('http://10.58.7.75:8000/users/login', {
         method: 'POST',
         body: JSON.stringify({
           email: userId,
@@ -69,7 +69,7 @@ export default function Login() {
         .then(res => res.json())
         .then(res => {
           if (res.access_token) {
-            localStorage.setItem('token', res.access_token);
+            localStorage.setItem('access_token', res.access_token);
             navigate('/');
           } else {
             alert('이메일과 비밀번호를 확인해주세요.');
@@ -81,7 +81,7 @@ export default function Login() {
   };
 
   return (
-    <div className="login">
+    <div className="loginPage">
       <div className="backBlue">
         <div className="backBlueNav">
           <div className="logo">
@@ -90,16 +90,22 @@ export default function Login() {
         </div>
         <div className="backBlueMain">
           <h1>로그인</h1>
-          <p>외워야 할 비밀번호가 많아 불편하셨죠? </p>
-          <p>이제 일회용 코드를 이용하여 간편하게 로그인하세요.</p>
-          <p> * 이메일 또는 휴대폰 번호 최초 인증 후 사용가능</p>
+          <div>
+            <p>외워야 할 비밀번호가 많아 불편하셨죠? </p>
+            <p>이제 일회용 코드를 이용하여 간편하게 로그인하세요.</p>
+            <p> * 이메일 또는 휴대폰 번호 최초 인증 후 사용가능</p>
+          </div>
         </div>
         <div className="backBlueFooter">
           <span>
-            IKEHEYO.kr - 쿠키 정책 , 개인정보처리방침 <br />© WECODE IKEHEYO
-            Systems 2022-2222
+            이케해여? - <span className="underLine">쿠키 정책</span> ,{' '}
+            <span className="underLine">개인정보처리방침</span> <br />© WECODE
+            IKEHEYO Systems 2022-2222
           </span>
         </div>
+        <Link className="backToPage" to="/">
+          <i className="fas fa-regular fa-arrow-left" />
+        </Link>
       </div>
       <div className="backWhite">
         <form className="loginGate" onSubmit={handleLogin}>
@@ -115,7 +121,7 @@ export default function Login() {
               />
               <label htmlFor="inputUserId">이메일</label>
             </div>
-            <div className="inline-text">
+            <div className="inlineText">
               <span>{errorMsgId}</span>
             </div>
           </div>
@@ -148,8 +154,12 @@ export default function Login() {
               <span>{errorMsgPassword}</span>
             </div>
           </div>
-          <button type="submit">로그인</button>
-          <p>IKEHEYO 계정이 없으신가요? 지금 바로 만들어보세요</p>
+          <button className="submitBtn" type="submit">
+            로그인
+          </button>
+          <p className="signupTitle">
+            IKEHEYO 계정이 없으신가요? 지금 바로 만들어보세요
+          </p>
           <button className="signUpBtn" type="button" onClick={goToSignUp}>
             회원가입
           </button>
