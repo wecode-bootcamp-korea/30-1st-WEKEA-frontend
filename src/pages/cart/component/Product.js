@@ -13,6 +13,7 @@ export default function Product({ data }) {
     quantity,
     size,
     sub_category,
+    image,
   } = data;
 
   const handleCountBtn = e => {
@@ -57,10 +58,7 @@ export default function Product({ data }) {
     <div className="product">
       <div className="productContent">
         <Link className="productImg" to="/">
-          <img
-            alt="productImg"
-            src="https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-          ></img>
+          <img alt="productImg" src={image}></img>
         </Link>
         <div className="productInfo">
           <div className="productHeader">
