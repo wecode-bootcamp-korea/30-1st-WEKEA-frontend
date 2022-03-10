@@ -1,104 +1,98 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 import './Footer.scss';
-
 export default function Footer() {
+  const usenavigate = useNavigate();
+
+  const goToSignUp = () => {
+    usenavigate('/signup');
+  };
   return (
     <div className="footerBox">
       <div className="listBox">
         <div className="listBoxSignUp">
-          <p>asds</p>
-          <p>asdasd</p>
-          <button>asdasd</button>
-          <div className="listBoxIcon">
-            <span>i</span>
-            <span>i</span>
-            <span>i</span>
-          </div>
+          <h1>IKEHEAYO Family</h1>
+          <p>
+            지금 IKEA Family에 무료로 가입하고 다양한 멤버 전용 혜택을 누리세요.
+          </p>
+          <button onClick={goToSignUp}>IKEHEAYO Family 가입하기</button>
         </div>
         <div className="listBoxlist">
-          <li>
+          <ul>
             <h3>고객문의</h3>
-            <ul>
-              <li>
-                <a href="#">asd</a>
-              </li>
-              <li>
-                <a href="#">qwe</a>
-              </li>
-              <li>
-                <a href="#">zxc</a>
-              </li>
-              <li>
-                <a href="#">rty</a>
-              </li>
-              <li>
-                <a href="#">fgh</a>
-              </li>
-            </ul>
-          </li>
-          <li>
+            <li>
+              <Link to="/">김 산</Link>
+            </li>
+            <li>
+              <Link to="/">김광일</Link>
+            </li>
+            <li>
+              <Link to="/">조진목</Link>
+            </li>
+            <li>
+              <Link to="/">안광민</Link>
+            </li>
+            <li>
+              <Link to="/">유강호</Link>
+            </li>
+          </ul>
+          <ul>
             <h3>쇼핑하기</h3>
-            <ul>
-              <li>
-                <a href="#">asd</a>
-              </li>
-              <li>
-                <a href="#">qwe</a>
-              </li>
-              <li>
-                <a href="#">zxc</a>
-              </li>
-              <li>
-                <a href="#">rty</a>
-              </li>
-              <li>
-                <a href="#">fgh</a>
-              </li>
-            </ul>
-          </li>
-          <li>
+            <li>
+              <Link to="/">김 산</Link>
+            </li>
+            <li>
+              <Link to="/">김광일</Link>
+            </li>
+            <li>
+              <Link to="/">조진목</Link>
+            </li>
+            <li>
+              <Link to="/">안광민</Link>
+            </li>
+            <li>
+              <Link to="/">유강호</Link>
+            </li>
+          </ul>
+          <ul>
             <h3>서비스</h3>
-            <ul>
-              <li>
-                <a href="#">asd</a>
-              </li>
-              <li>
-                <a href="#">qwe</a>
-              </li>
-              <li>
-                <a href="#">zxc</a>
-              </li>
-              <li>
-                <a href="#">rty</a>
-              </li>
-              <li>
-                <a href="#">fgh</a>
-              </li>
-            </ul>
-          </li>
-          <li>
+            <li>
+              <Link to="/">김 산</Link>
+            </li>
+            <li>
+              <Link to="/">김광일</Link>
+            </li>
+            <li>
+              <Link to="/">조진목</Link>
+            </li>
+            <li>
+              <Link to="/">안광민</Link>
+            </li>
+            <li>
+              <Link to="/">유강호</Link>
+            </li>
+          </ul>
+
+          <ul>
             <h3>IKEHEAYO? 이야기</h3>
-            <ul>
-              <li>
-                <a href="#">asd</a>
-              </li>
-              <li>
-                <a href="#">qwe</a>
-              </li>
-              <li>
-                <a href="#">zxc</a>
-              </li>
-              <li>
-                <a href="#">rty</a>
-              </li>
-              <li>
-                <a href="#">fgh</a>
-              </li>
-            </ul>
-          </li>
+            <li>
+              <Link to="/">김 산</Link>
+            </li>
+            <li>
+              <Link to="/">김광일</Link>
+            </li>
+            <li>
+              <Link to="/">조진목</Link>
+            </li>
+            <li>
+              <Link to="/">안광민</Link>
+            </li>
+            <li>
+              <Link to="/">유강호</Link>
+            </li>
+          </ul>
         </div>
       </div>
       <div className="infoBox">
@@ -120,19 +114,19 @@ export default function Footer() {
         <div className="infoList">
           <ul>
             <li>
-              <a href="#">asd</a>
+              <Link to="/">김 산</Link>
             </li>
             <li>
-              <a href="#">qwe</a>
+              <Link to="/">김광일</Link>
             </li>
             <li>
-              <a href="#">zxc</a>
+              <Link to="/">조진목</Link>
             </li>
             <li>
-              <a href="#">rty</a>
+              <Link to="/">안광민</Link>
             </li>
             <li>
-              <a href="#">fgh</a>
+              <Link to="/">유강호</Link>
             </li>
           </ul>
         </div>
