@@ -39,10 +39,7 @@
         padding: 10px 25px;
         font-size: 13px;
         font-weight: bold;
-
-        &:hover {
-          cursor: pointer;
-        }
+        cursor: pointer;
 
         span {
           padding-left: 15px;
@@ -57,6 +54,7 @@
       width: 0;
       height: 0;
     }
+
     .show {
       visibility: visible;
       @include flexBox(space-around, center, column);
@@ -64,7 +62,6 @@
       position: absolute;
       top: 40px;
       width: 230px;
-
       padding: 5px 15px;
       border: 1px solid gainsboro;
       border-radius: 7px;
@@ -81,10 +78,10 @@
 
         .labels {
           @include flexBox(space-between, flex-start);
-
           width: 100%;
           height: 30px;
         }
+
         .colorRadioWrap {
           margin-bottom: 10px;
           display: inline-block;
@@ -118,6 +115,7 @@
           .brown div {
             background-color: brown;
           }
+
           .white div {
             background-color: white;
           }
@@ -131,6 +129,7 @@
           }
         }
       }
+
       .priceRange {
         @include flexBox(center, center);
 
@@ -167,10 +166,7 @@
           font-size: 13px;
           border-radius: 3px;
           border: 1px solid black;
-
-          &:hover {
-            cursor: pointer;
-          }
+          cursor: pointer;
         }
       }
     }

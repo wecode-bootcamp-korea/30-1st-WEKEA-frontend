@@ -13,6 +13,8 @@ export default function ItemList() {
 
   const sortData = [
     { filter_boolean: !!sort || !!size || !!colorList.length },
+    { limit: 10 },
+    { offset: 0 },
     { sort },
     { size },
   ];
@@ -132,23 +134,22 @@ export default function ItemList() {
         </div>
       </div>
 
-      <div className="ProductionRecomment">
+      <div className="productionRecomment">
         <p>추천제품</p>
         <div className="recommentList">
           {itemList &&
             itemList.map((item, index) => {
               return (
-                <Link to="" className="productionItem" key={index}>
-                  <div className="imgCover">
-                    <img alt="상품이미지" src={item.image_list[0]} />
-                  </div>
-                  <p>{item.name}</p>
-                  <span className="detailText">{item.description}</span>
-                  <div className="priceWrap">
-                    <span className="won">₩</span>
-                    <span className="price">{item.price}</span>
-                  </div>
-                </Link>
+                <ProductionItem
+                  newData={itemList}
+                  key={index}
+                  title={item.name}
+                  starList={item.average_rating}
+                  src={item.image_list}
+                  price={item.price}
+                  store={item.store_list}
+                  color={item.color_list}
+                />
               );
             })}
         </div>

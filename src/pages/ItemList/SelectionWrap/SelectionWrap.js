@@ -11,12 +11,12 @@ export default function SelectionWrap({
   sizeButton,
   colorButton,
 }) {
-  const [btnVisible, setbtnVisible] = useState('');
+  const [dropdownBtn, setDropdownBtn] = useState('');
   function dropboxAble(e) {
-    if (e.target.value !== btnVisible) {
-      setbtnVisible(e.target.value);
+    if (e.target.value !== dropdownBtn) {
+      setDropdownBtn(e.target.value);
     } else {
-      setbtnVisible('');
+      setDropdownBtn('');
     }
   }
 
@@ -29,7 +29,7 @@ export default function SelectionWrap({
         <div className="selectionDetail">
           <button
             className={
-              btnVisible === '1' ? 'selectionAfterBtn' : 'selectionBtn'
+              dropdownBtn === '1' ? 'selectionAfterBtn' : 'selectionBtn'
             }
             type="select"
             value="1"
@@ -37,7 +37,7 @@ export default function SelectionWrap({
           >
             정렬<span>&#709;</span>
           </button>
-          <div className={btnVisible === '1' ? 'show' : 'hide'}>
+          <div className={dropdownBtn === '1' ? 'show' : 'hide'}>
             <div className="selectionCheckList">
               <label htmlFor="opt-1" className="labels">
                 <span>최신 상품</span>
@@ -91,7 +91,7 @@ export default function SelectionWrap({
         <div className="selectionDetail">
           <button
             className={
-              btnVisible === '2' ? 'selectionAfterBtn' : 'selectionBtn'
+              dropdownBtn === '2' ? 'selectionAfterBtn' : 'selectionBtn'
             }
             type="select"
             value="2"
@@ -99,7 +99,7 @@ export default function SelectionWrap({
           >
             지점<span>&#709;</span>
           </button>
-          <div className={btnVisible === '2' ? 'show' : 'hide'}>
+          <div className={dropdownBtn === '2' ? 'show' : 'hide'}>
             <div className="selectionCheckList">
               <label htmlFor="opt-5" className="labels">
                 <span>광명점</span>
@@ -129,7 +129,7 @@ export default function SelectionWrap({
         <div className="selectionDetail">
           <button
             className={
-              btnVisible === '3' ? 'selectionAfterBtn' : 'selectionBtn'
+              dropdownBtn === '3' ? 'selectionAfterBtn' : 'selectionBtn'
             }
             type="select"
             value="3"
@@ -141,7 +141,7 @@ export default function SelectionWrap({
         <div className="selectionDetail">
           <button
             className={
-              btnVisible === '4' ? 'selectionAfterBtn' : 'selectionBtn'
+              dropdownBtn === '4' ? 'selectionAfterBtn' : 'selectionBtn'
             }
             type="select"
             value="4"
@@ -149,7 +149,7 @@ export default function SelectionWrap({
           >
             가격<span>&#709;</span>
           </button>
-          <div className={btnVisible === '4' ? 'show' : 'hide'}>
+          <div className={dropdownBtn === '4' ? 'show' : 'hide'}>
             <form className="priceRange">
               <div className="priceRangeWrap">
                 <input type="text" className="minPrice" />
@@ -167,7 +167,7 @@ export default function SelectionWrap({
         <div className="selectionDetail">
           <button
             className={
-              btnVisible === '5' ? 'selectionAfterBtn' : 'selectionBtn'
+              dropdownBtn === '5' ? 'selectionAfterBtn' : 'selectionBtn'
             }
             type="select"
             value="5"
@@ -175,7 +175,7 @@ export default function SelectionWrap({
           >
             색상<span>&#709;</span>
           </button>
-          <div className={btnVisible === '5' ? 'show' : 'hide'}>
+          <div className={dropdownBtn === '5' ? 'show' : 'hide'}>
             <div className="selectionCheckList">
               <div className="colorRadioWrap">
                 <label className="colorRadio red">
@@ -256,7 +256,7 @@ export default function SelectionWrap({
         <div className="selectionDetail">
           <button
             className={
-              btnVisible === '6' ? 'selectionAfterBtn' : 'selectionBtn'
+              dropdownBtn === '6' ? 'selectionAfterBtn' : 'selectionBtn'
             }
             type="select"
             value="6"
@@ -264,7 +264,7 @@ export default function SelectionWrap({
           >
             사이즈<span>&#709;</span>
           </button>
-          <div className={btnVisible === '6' ? 'show' : 'hide'}>
+          <div className={dropdownBtn === '6' ? 'show' : 'hide'}>
             <div className="selectionCheckList">
               <label htmlFor="opt-11" className="labels">
                 <span>XL</span>
