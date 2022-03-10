@@ -1,1 +1,121 @@
-// Hello
+@import '../../styles/mixin.scss';
+
+.itemListWrap {
+  @include flexBox(flex-start, flex-start, column);
+  width: 1100px;
+  height: 100%;
+
+  .categoryNav {
+    width: 100%;
+    margin: 30px 0px 90px;
+
+    .categories {
+      @include flexBox(flex-start);
+      font-size: 12px;
+
+      li {
+        margin-right: 10px;
+      }
+
+      .itemLink {
+        color: black;
+        text-decoration: none;
+      }
+      :hover {
+        text-decoration: underline;
+      }
+
+      span {
+        font-size: 5px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .productionTitle {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .productionText {
+    width: 640px;
+    margin: 40px 0px;
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  .productionListWrap {
+    @include flexBox(center);
+    width: 100%;
+    width: 100%;
+
+    .productionList {
+      @include flexBox(flex-start, flex-start);
+      flex-wrap: wrap;
+      margin: 10px 0px;
+    }
+  }
+
+  .productionRecomment {
+    @include flexBox(center, flex-start, column);
+
+    p {
+      margin-top: 80px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .recommentList {
+      @include flexBox(flex-start, center, row);
+      width: 1098px;
+      height: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+
+      .productionItem {
+        @include flexBox(center, flex-start, column);
+        padding: 30px 12px 20px;
+        text-decoration: none;
+        color: black;
+        padding-bottom: 50px;
+        border-bottom: 1px solid rgb(221, 221, 221);
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        img {
+          width: 240px;
+          height: 240px;
+          margin-bottom: 20px;
+        }
+
+        p {
+          margin-top: 0px;
+          font-size: 14px;
+          font-weight: bold;
+          margin-bottom: 8px;
+        }
+
+        .detailText {
+          width: 240px;
+          overflow: hidden;
+          line-height: 150%;
+          font-size: 12px;
+          margin-bottom: 15px;
+        }
+
+        .priceWrap {
+          .won {
+            font-size: 15px;
+            vertical-align: top;
+            margin-right: 5px;
+          }
+          .price {
+            font-size: 22px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
