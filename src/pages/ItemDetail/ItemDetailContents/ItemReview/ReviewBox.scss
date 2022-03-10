@@ -1,0 +1,16 @@
+@import '../../../../styles/mixin.scss';
+
+.box {
+  width: 400px;
+  gap: 30px;
+  .reviewBox {
+    @include flexBox(space-between, center, row);
+    border-bottom: 1px solid #bfbfbf;
+    padding-bottom: 10px;
+  }
+
+  .reviewercomment {
+    padding: 30px;
+    @include flexBox(start, center, row);
+  }
+}

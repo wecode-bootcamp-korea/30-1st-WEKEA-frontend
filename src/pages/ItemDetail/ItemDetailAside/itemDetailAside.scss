@@ -1,0 +1,58 @@
+@import '../../../styles/mixin.scss';
+
+.asideBox {
+  position: sticky;
+  height: 350px;
+  top: 0;
+
+  @include flexBox(center, center, column);
+
+  .asideBoxNav {
+    @include flexBox(center, top, row);
+    border-bottom: 1px solid #dfdfdf;
+
+    .ItemName {
+      padding-top: 10px;
+      width: 330px;
+      height: 100px;
+    }
+
+    .ItemPrice {
+      padding-top: 10px;
+      width: 130px;
+      height: 100px;
+    }
+  }
+
+  .asideBoxBtn {
+    @include flexBox(space-around, center, row);
+    padding-top: 20px;
+
+    .buyBtn {
+      width: 400px;
+      height: 60px;
+      border-radius: 35px;
+      border: 0;
+      font-size: 15px;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: #0158a3;
+      cursor: pointer;
+    }
+  }
+
+  .asideBoxInfo {
+    width: 460px;
+    height: 150px;
+    @include flexBox(center, start, column);
+    gap: 5px;
+    border-bottom: 1px solid #dfdfdf;
+
+    .itemStock {
+      color: gray;
+    }
+    .remainStock {
+      color: gray;
+    }
+  }
+}
