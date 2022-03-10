@@ -1,0 +1,59 @@
+@import '../../../styles/mixin.scss';
+
+.contentsBox {
+  @include flexBox(center, start, column);
+
+  .itemImg {
+    @include flexBox(space-between, center, row);
+    width: 590px;
+    padding: 10px;
+  }
+
+  .itemDescriptionBox {
+    @include flexBox(center, start, column);
+    width: 590px;
+    padding-bottom: 10px;
+    font-size: 20px;
+
+    .itemNumList {
+      width: 87px;
+      height: 18px;
+      @include flexBox(start, center, row);
+      font-size: 10px;
+    }
+
+    .itemNum {
+      width: 87px;
+      height: 18px;
+      @include flexBox(center, center, row);
+      background-color: black;
+      color: white;
+      font-size: 10px;
+      font-weight: bold;
+    }
+  }
+
+  .itemSubDescriptionBtn {
+    background-color: white;
+    border: 0;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    @include flexBox(space-between, center, row);
+    height: 120px;
+    width: 590px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .itemReviewBtn {
+    background-color: white;
+    border: 0;
+    @include flexBox(space-between, center, row);
+    height: 120px;
+    width: 590px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}

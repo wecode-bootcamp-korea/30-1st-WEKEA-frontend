@@ -1,0 +1,113 @@
+@import '../../../styles/mixin.scss';
+
+$loginColor: #0058a3;
+.loginAside {
+  @include flexBox(none, center, column);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 500px;
+  height: 100vh;
+  border: 1px solid red;
+
+  .closeBtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e2e2e2;
+    }
+  }
+
+  .account {
+    @include flexBox(center, center, row);
+    width: 100%;
+    border-bottom: 1px solid rgba(220, 226, 255, 0.336);
+    padding: 120px 48px 48px;
+    background-color: $loginColor;
+
+    h1 {
+      font-size: 36px;
+      color: white;
+    }
+
+    span {
+      width: 300px;
+    }
+
+    .loginBtn {
+      width: 90px;
+      height: 40px;
+      border: none;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: bold;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #e2e2e2;
+      }
+    }
+  }
+
+  .signLink {
+    @include flexBox(center, center, row);
+    width: 498px;
+    padding: 20px 48px;
+    background-color: $loginColor;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .signComponent {
+      @include flexBox(center, none, column);
+      width: 364px;
+      color: white;
+    }
+
+    .subject {
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .subText {
+      font-size: 12px;
+    }
+
+    .signBtn {
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 100px;
+      font-size: 30px;
+
+      &:hover {
+        text-decoration: none;
+        background-color: #e2e2e2;
+      }
+    }
+  }
+
+  .loginWrap {
+    @include flexBox(flex-start, flex-start, column);
+    width: 100%;
+    padding: 40px 48px 0px;
+    font-size: 14px;
+
+    .login {
+      margin-bottom: 30px;
+      color: black;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

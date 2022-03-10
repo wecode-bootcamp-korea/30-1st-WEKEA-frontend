@@ -1,1 +1,17 @@
-// Hello
+@import '../../styles/mixin.scss';
+
+.item {
+  @include flexBox(center, center, column);
+
+  .itemBox {
+    display: flex;
+
+    .itemContents {
+      width: 65%;
+    }
+
+    .itemAside {
+      width: 35%;
+    }
+  }
+}
