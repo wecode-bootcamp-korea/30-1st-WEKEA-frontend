@@ -7,17 +7,30 @@ import ItemDetailAside from './ItemDetailAside/ItemDetailAside';
 import './ItemDetail.scss';
 
 export default function ItemDetail() {
+  const [itemData, setItemData] = useState(null);
+
+  useEffect(
+    () =>
+      fetch('http://10.58.7.75:8000/products/1', {
+        method: 'GET',
+      })
+        .then(res => res.json())
+        .then(result => setItemData(result.data)),
+    []
+  );
+  console.log(itemData);
   return (
-    <div className="item">
-      <div className="itemBox">
-        <div className="itemContents">
-          <ItemDetailContents />
-        </div>
-        <div className="itemAside">
-          <ItemDetailAside />
+    itemData !== null && (
+      <div className="item">
+        <div className="itemBox">
+          <div className="itemContents">
+            <ItemDetailContents itemData={itemData} />
+          </div>
+          <div className="itemAside">
+            <ItemDetailAside itemData={itemData} />
+          </div>
         </div>
       </div>
-      <div className="test">TEST</div>
-    </div>
+    )
   );
 }

@@ -46,28 +46,13 @@
     height: 150px;
     @include flexBox(center, start, column);
     gap: 5px;
+    border-bottom: 1px solid #dfdfdf;
 
     .itemStock {
-      @include flexBox(center, start, column);
-      border-bottom: 1px solid #dfdfdf;
-
-      .itemStockIcon {
-        @include flexBox(center, start, row);
-        font-size: 15px;
-        color: gray;
-        padding-bottom: 7px;
-      }
-      .itemStockState {
-        width: 460px;
-        font-size: 15px;
-        color: gray;
-        background-color: #ffffff;
-        padding-bottom: 10px;
-      }
+      color: gray;
     }
     .remainStock {
-      @include flexBox(start, center, row);
-      background-color: #0158a3;
+      color: gray;
     }
   }
 }
