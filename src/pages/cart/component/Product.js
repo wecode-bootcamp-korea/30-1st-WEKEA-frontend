@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import './Product.scss';
 
-export default function Product({ data }) {
+export default function Product({ data, changeCountBtn }) {
   const {
     cart_id,
     color,
@@ -10,6 +10,7 @@ export default function Product({ data }) {
     main_category,
     price,
     product_name,
+    stock,
     quantity,
     size,
     sub_category,
@@ -17,52 +18,59 @@ export default function Product({ data }) {
   } = data;
 
   const handleCountBtn = e => {
-    let quarySelect = '';
-    quarySelect += 'cart_id:' + cart_id;
-    // if (e.target.value === 0) {
-    //   fetch('/data/cart.json/' + quarySelect, {
-    //     method: 'DELETE',
-    //   })
-    //     .then(response => response.json())
-    //     .then(result => {
-    //       console.log(result);
-    //     });
-    //   return;
-    // }
-    quarySelect += '&quatity:' + e.target.value;
-    console.log(quarySelect);
-    // fetch('/data/cart.json/' + quarySelect, {
-    //   method: 'PUT',
+    // fetch('http://10.58.7.75:8000/users/cart', {
+    //   method: 'PATCH',
+    //   headers: {
+    //     Authorization: localStorage.getItem('access_token'),
+    //   },
+    //   body: JSON.stringify({
+    //     cart_id: cart_id,
+    //     quantity: parseInt(e.target.value),
+    //   }),
     // })
     //   .then(response => response.json())
-    //   .then(result => {console.log(result)});
+    //   .then(result => {
+    //     if (result.message === 'LACK_OF_QUANTITY') {
+    //       alert('재고가 부족합니다.');
+    //     }
+    //   });
+
+    changeCountBtn(e, data);
   };
 
   const handleDeleteBtn = () => {
-    let quarySelect = '';
-    quarySelect += 'cart_id:' + cart_id;
-    // fetch('/data/cart.json/' + quarySelect, {
-    //   method: 'DELETE',
-    // })
-    //   .then(response => response.json())
-    //   .then(result => {console.log(result)});
+    fetch('http://10.58.7.75:8000/users/cart', {
+      method: 'DELETE',
+      headers: {
+        Authorization: localStorage.getItem('access_token'),
+      },
+      body: JSON.stringify({
+        cart_id: cart_id,
+      }),
+    }).then(response => console.log(response.status === 204));
   };
 
   const dotPrice = price => {
     return parseInt(price).toLocaleString();
   };
-  console.log(quantity);
-  // TODO 100에 제품재고 넣기
-  const productQuantity = [...Array(100)].map((v, i) => i);
+
+  const productQuantity = [...Array(stock + 1)].map((v, i) => i);
   return (
     <div className="product">
       <div className="productContent">
         <Link className="productImg" to="/">
-          <img alt="productImg" src={image}></img>
+          <img
+            alt="productImg"
+            src={
+              image !== null
+                ? image
+                : 'https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
+            }
+          />
         </Link>
         <div className="productInfo">
           <div className="productHeader">
-            {discount / quantity < price && (
+            {discount < price && (
               <h1 className="onSale">더 낮은 새로운 가격</h1>
             )}
             <Link className="productName" to="/">
@@ -73,12 +81,9 @@ export default function Product({ data }) {
             </span>
             <span className="productColorSize">{`${color} / ${size}`}</span>
             <span className="currentPrice">
-              ₩{' '}
-              {discount / quantity < price
-                ? dotPrice(discount / quantity)
-                : dotPrice(price)}
+              ₩ {discount < price ? dotPrice(discount) : dotPrice(price)}
             </span>
-            {discount / quantity < price && (
+            {discount < price && (
               <span className="previousPrice">
                 이전 가격:{' '}
                 <span className="lineThrough">₩ {dotPrice(price)}</span>
@@ -108,7 +113,7 @@ export default function Product({ data }) {
           </div>
         </div>
       </div>
-      <span className="productPrice">₩ {dotPrice(discount)}</span>
+      <span className="productPrice">₩ {dotPrice(discount * quantity)}</span>
     </div>
   );
 }

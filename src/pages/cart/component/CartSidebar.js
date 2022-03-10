@@ -4,12 +4,17 @@ import './CartSidebar.scss';
 
 export default function CartSidebar({ totalPrice }) {
   const clickBuyBtn = () => {
-    // fetch('/data/cart.json' + quarySelect, {
-    //   method: 'post',
-    //   body: {buy: true},
-    // })
-    //   .then(response => response.json())
-    //   .then(result => {console.log(result)});
+    fetch('http://10.58.7.75:8000/users/cart', {
+      method: 'post',
+      headers: {
+        Authorization: localStorage.getItem('access_token'),
+      },
+      body: JSON.stringify({ cart_id: 0 }),
+    })
+      // .then(response => response.json())
+      .then(result => {
+        console.log(result);
+      });
   };
 
   return (

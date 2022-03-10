@@ -1,12 +1,13 @@
 @import '../../styles/mixin.scss';
 
 .cartWrapper {
-  padding: 64px 40px 130px 120px;
+  margin: 0 40px 0 120px;
+  padding: 64px 0 130px 0;
   border-bottom: 1px solid #dfdfdf;
+  height: fit-content;
+  max-width: 1250px;
 
   .cart {
-    // padding: 0 48px;
-    max-width: 1500px;
     flex-grow: 1;
 
     .cartHeader {
