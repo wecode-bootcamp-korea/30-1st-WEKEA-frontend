@@ -1,6 +1,6 @@
 @import '../../../styles/mixin.scss';
 
-.ItemSubDescription {
+.Category {
   display: none;
   position: fixed;
   top: 0;
@@ -48,67 +48,30 @@
         color: #999;
         background-color: transparent;
       }
+
+      .logo {
+        width: 90px;
+        height: 36px;
+        background-color: #0058a3;
+        .logoInside {
+          @include flexBox(center);
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          color: #0058a3;
+          font-weight: 1000;
+          background-color: #fbd914;
+        }
+      }
     }
 
     main {
       padding: 16px;
       margin-top: 20px;
 
-      .itemDescription {
-        padding-bottom: 10px;
-        font-size: 17px;
-        font-weight: bold;
-      }
-
-      .itemNumList {
-        width: 87px;
-        height: 18px;
-        font-size: 10px;
-      }
-
-      .itemNum {
-        width: 87px;
-        height: 18px;
-        @include flexBox(center, center, row);
-        background-color: black;
-        color: white;
-        font-size: 10px;
-        font-weight: bold;
-      }
-    }
-
-    footer {
-      padding: 16px;
-
-      details {
-        padding: 0.5em 0.5em 0;
-        margin-bottom: 1em;
-      }
-
-      summary {
-        font-weight: bold;
-        margin: -0.5em -0.5em 0;
-        padding: 0.5em;
-        cursor: pointer;
-      }
-
-      summary::marker {
-        content: '+ ';
-        font-family: monospace;
-      }
-
-      details[open] summary::marker {
-        content: '- ';
-      }
-
-      details[open] {
-        padding: 0.5em;
-      }
-
-      details[open] summary {
-        margin-bottom: 0.5em;
-        background-color: #0158a3;
-        color: #fbd914;
+      .goToBtn {
+        width: 350px;
+        height: 65px;
       }
     }
   }
