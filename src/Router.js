@@ -17,8 +17,8 @@ const Router = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/itemlist" element={<ItemList />} />
         <Route path="/itemdetail" element={<ItemDetail />} />
-        <Route path="/footer" element={<Footer />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
