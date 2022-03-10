@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "image": "https://images.unsplash.com/photo-1593791767540-fb2bddb20b9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    "dots": [
+      {
+        "onSale": true,
+        "productName": "TEODORES 테오도레스 의자",
+        "category": "식탁의자",
+        "price": "29,900",
+        "defaultHover": true,
+        "coordinate": { "top": "550px", "left": "405px" },
+        "commentLocation": { "bottom": "8px", "left": "0" }
+      },
+      {
+        "onSale": true,
+        "productName": "TOMMARYD 톰마뤼드",
+        "category": "바테이블",
+        "price": "269,000",
+        "defaultHover": false,
+        "coordinate": { "top": "470px", "left": "280px" },
+        "commentLocation": { "bottom": "8px", "left": "0" }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1709&q=80",
+    "dots": [
+      {
+        "onSale": true,
+        "productName": "LISABO 리사보 테이블",
+        "category": "식탁",
+        "price": "199,000",
+        "defaultHover": true,
+        "coordinate": { "top": "490px", "left": "200px" },
+        "commentLocation": { "bottom": "8px", "left": "0" }
+      },
+      {
+        "onSale": false,
+        "productName": "MARKUS 마르쿠스",
+        "category": "사무용의자",
+        "price": "199,000",
+        "defaultHover": false,
+        "coordinate": { "top": "420px", "left": "180px" },
+        "commentLocation": { "bottom": "8px", "left": "0" }
+      }
+    ]
+  }
+]
