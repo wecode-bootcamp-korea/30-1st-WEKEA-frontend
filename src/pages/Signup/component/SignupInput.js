@@ -43,12 +43,10 @@ export default forwardRef(function SignupInput(
       setPasswordInputType('text');
       e.target.classList.toggle('fa-eye-slash');
       e.target.classList.toggle('fa-eye');
-      // '<i className="far fa-solid fa-eye-slash" />'
     } else if (passwordInputType === 'text' && e.target.tagName === 'I') {
       setPasswordInputType('password');
       e.target.classList.toggle('fa-eye-slash');
       e.target.classList.toggle('fa-eye');
-      // e.target.innerHTML = '<i className="far fa-solid fa-eye" />';
     }
   };
 
