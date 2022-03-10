@@ -29,39 +29,13 @@ export default function ItemDetailContents() {
 
   useEffect(
     () =>
-      fetch('http://10.58.6.205:8000/products/detail/1', {
+      fetch('http://10.58.7.75:8000/products/detail/1', {
         method: 'GET',
       })
         .then(res => res.json())
         .then(result => setItemData(result.data)),
     []
   );
-
-  // useEffect(() => {
-  //   fetch('/data/itemList.json')
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       setItemData(data.result);
-  //     });
-  // }, []);
-
-  // console.log(itemData.images);
-
-  //   <div className="productionListWrap">
-  //   <div className="productionList">
-  //     {itemList.map((item, index) => {
-  //       return (
-  //         <ProductionItem
-  //           key={index}
-  //           title={item.name}
-  //           text={item.description}
-  //           src={item.image_list}
-  //           price={item.price}
-  //         />
-  //       );
-  //     })}
-  //   </div>
-  // </div>
 
   console.log(itemData);
   if (itemData) {
