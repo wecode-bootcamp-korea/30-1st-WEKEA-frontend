@@ -1,14 +1,14 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-
 import './Footer.scss';
+
 export default function Footer() {
-  const usenavigate = useNavigate();
+  const navigate = useNavigate();
 
   const goToSignUp = () => {
-    usenavigate('/signup');
+    navigate('/signup');
   };
+
   return (
     <div className="footerBox">
       <div className="listBox">
