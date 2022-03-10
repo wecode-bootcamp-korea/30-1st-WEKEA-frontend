@@ -9,9 +9,9 @@ export default function LoginAside() {
         <h1>Hej</h1>
         <span />
         <Link to="/login">
-          <button type="button" className="loginBtn">
+          <div type="button" className="loginBtn">
             로그인
-          </button>
+          </div>
         </Link>
       </div>
       <div className="sign">
@@ -27,14 +27,14 @@ export default function LoginAside() {
         </Link>
       </div>
       <div className="loginWrap">
-        <Link to="/login" className="login">
-          {/*컴포넌트 재사용및, 추후 클래스명을 변경*/}
+        <Link to="/login" className="sideMenu">
+          {/*TODO: 컴포넌트 재사용및, 추후 클래스명을 변경*/}
           로그인
         </Link>
-        <Link to="" className="login">
+        <Link to="" className="sideMenu">
           배송조회
         </Link>
-        <Link to="" className="login">
+        <Link to="" className="sideMenu">
           장바구니
         </Link>
       </div>
