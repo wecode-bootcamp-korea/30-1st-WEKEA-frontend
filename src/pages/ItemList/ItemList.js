@@ -10,53 +10,61 @@ export default function ItemList() {
   const [sort, setSort] = useState('');
   const [size, setSize] = useState('');
   const [colorList, setColorList] = useState([]);
-  // const [categoryId, setCategoryId] = useState(1);
-  const [isFilter, setIsFilter] = useState(true);
 
-  const colors = [];
+  const sortData = [
+    { filter_boolean: !!sort || !!size || !!colorList.length },
+    { sort },
+    { size },
+  ];
+
+  const colorArray = [];
+
   for (let i = 0; i < colorList.length; i++) {
-    colors.push({ color: colorList[i] });
+    colorArray.push({ color: colorList[i] });
   }
 
+  const filterData = [...sortData, ...colorArray];
+
   function sortButton(e) {
-    setIsFilter(false);
     setSort(e.target.value);
-    // console.log(e.target.value);
   }
 
   function sizeButton(e) {
-    setIsFilter(false);
     setSize(e.target.value);
-    // console.log(e.target.value);
   }
 
   function colorButton(e) {
-    setIsFilter(false);
-    // console.log(e.target.value);
-    // console.log(e.target.checked);
     if (e.target.checked) {
       setColorList(colorList.concat(e.target.value));
-      // console.log(colorList);
     }
 
     if (!e.target.checked) {
       setColorList(colorList.filter(element => element !== e.target.value));
-      // console.log(colorList);
     }
+  }
 
-    const colors = [];
-    for (let i = 0; i < colorList.length; i++) {
-      colors.push({ color: colorList[i] });
+  let string = '';
+
+  for (let i = 0; i < filterData.length; i++) {
+    if (!!Object.values(filterData[i])[0]) {
+      let quaryString = Object.entries(filterData[i])
+        .map(e => e.join('='))
+        .join('&');
+      // if (!string) {
+      //   // string += '?' + quaryString;
+      // } else {
+      string += '&' + quaryString;
+      // }
     }
   }
 
   useEffect(() => {
-    fetch(`http://10.58.6.175:8000/products/product-list?sub_category_id=1`)
+    fetch(`http://10.58.6.175:8000/products/product?sub_category_id=1` + string)
       .then(res => res.json())
       .then(data => {
         setItemList(data.result.product_data_list);
       });
-  }, []);
+  }, [string]);
 
   return (
     <div className="itemListWrap">
@@ -99,7 +107,6 @@ export default function ItemList() {
         sort={sort}
         size={size}
         colorList={colorList}
-        isFilter={isFilter}
         sortButton={sortButton}
         sizeButton={sizeButton}
         colorButton={colorButton}

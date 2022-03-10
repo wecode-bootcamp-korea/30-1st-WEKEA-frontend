@@ -12,11 +12,6 @@ export default function SelectionWrap({
   colorButton,
 }) {
   const [btnVisible, setbtnVisible] = useState('');
-  // const [sort, setSort] = useState('');
-  // const [size, setSize] = useState('');
-  // const [colorList, setColorList] = useState([]);
-  // // const [categoryId, setCategoryId] = useState(1);
-  // const [isFilter, setIsFilter] = useState(true);
   function dropboxAble(e) {
     if (e.target.value !== btnVisible) {
       setbtnVisible(e.target.value);
@@ -25,55 +20,8 @@ export default function SelectionWrap({
     }
   }
 
-  // function sortButton(e) {
-  //   setIsFilter(false);
-  //   setSort(e.target.value);
-  //   console.log(e.target.value);
-  // }
-
-  // function sizeButton(e) {
-  //   setIsFilter(false);
-  //   setSize(e.target.value);
-  //   console.log(e.target.value);
-  // }
-
-  // function colorButton(e) {
-  //   setIsFilter(false);
-  //   console.log(e.target.value);
-  //   console.log(e.target.checked);
-  //   if (e.target.checked) {
-  //     setColorList(colorList.concat(e.target.value));
-  //     console.log(colorList);
-  //   }
-
-  //   if (!e.target.checked) {
-  //     setColorList(colorList.filter(element => element !== e.target.value));
-  //     console.log(colorList);
-  //   }
-  // }
-
   function tests() {}
-  function submitBtn() {
-    // history.push({
-    //   filter_boolean: isFilter,
-    //   sort: sort,
-    //   limit: 10,
-    //   offset: 0,
-    //   size: size,
-    //   color: colorList,
-    // });
-    // // sub_category_id: categoryId,
-    // filter_boolean: isFilter,
-    // sort: sort,
-    // limit: 10,
-    // offset: 0,
-    // size: size,
-    // color: colorList,
-    // // min_price
-    // max_price
-    // discount
-    console.log();
-  }
+  function submitBtn() {}
 
   return (
     <div className="selectionWrap">
