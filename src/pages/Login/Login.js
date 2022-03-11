@@ -59,7 +59,7 @@ export default function Login() {
   const handleLogin = e => {
     e.preventDefault();
     if (loginValid) {
-      fetch('http://10.58.7.75:8000/users/login', {
+      fetch('http://10.58.6.175:8000/users/login', {
         method: 'POST',
         body: JSON.stringify({
           email: userId,

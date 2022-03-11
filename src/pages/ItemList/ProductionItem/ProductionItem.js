@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './ProductionItem.scss';
 
 export default function ProductionItem({
@@ -9,6 +8,8 @@ export default function ProductionItem({
   starList,
   store,
   color,
+  clickProduct,
+  id,
 }) {
   const [star, setStar] = useState('');
   const [storeNull, setStoreNull] = useState([]);
@@ -46,10 +47,17 @@ export default function ProductionItem({
   return (
     <div className="productItemsWrap">
       <div className="productHover">
-        <Link to="" className="productionItem">
+        <div className="productionItem">
           <div className="imgCover">
-            <img alt="상품이미지" src={src[0]} />
-            <p>{title}</p>
+            <img
+              alt="상품이미지"
+              src={src[0]}
+              onClick={clickProduct}
+              value={id}
+            />
+            <p onClick={clickProduct} value={id}>
+              {title}
+            </p>
           </div>
           <div className="priceWrap">
             <span className="won">₩</span>
@@ -60,7 +68,7 @@ export default function ProductionItem({
               </div>
             </div>
           </div>
-        </Link>
+        </div>
         <button className="baskitBtn">
           <i className="fa-solid fa-basket-shopping" />
         </button>

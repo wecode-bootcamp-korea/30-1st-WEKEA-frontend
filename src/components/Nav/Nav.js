@@ -2,21 +2,27 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Logo from '../../components/Logo/Logo';
+import CategoryAside from './CtegoryAside/CategoryAside';
 import LoginAside from './LoginAside/LoginAside';
 import './Nav.scss';
 
 export default function Nav() {
   const [visibleSidebar, setVisibleSidebar] = useState(false);
+  const [visibleCategorybar, setVisibleCategorybar] = useState(false);
 
   const handleVisible = () => {
     setVisibleSidebar(!visibleSidebar);
+  };
+
+  const handleCategorybar = () => {
+    setVisibleCategorybar(!visibleCategorybar);
   };
 
   return (
     <>
       <div className="nav">
         <div className="menuBar">
-          <button className="menuBarBtn">
+          <button className="menuBarBtn" onClick={handleCategorybar}>
             <i className="fas fa-solid fa-bars" />
           </button>
         </div>
@@ -50,6 +56,10 @@ export default function Nav() {
       <LoginAside
         visibleSidebar={visibleSidebar}
         handleVisible={handleVisible}
+      />
+      <CategoryAside
+        visibleCategorybar={visibleCategorybar}
+        handleCategorybar={handleCategorybar}
       />
     </>
   );

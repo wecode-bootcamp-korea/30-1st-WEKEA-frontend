@@ -8,7 +8,7 @@ export default function Main() {
   const [points, setPoints] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/mainSaleProduct.json', {
+    fetch('/data/mainSaleProduct.json', {
       method: 'GET',
     })
       .then(res => res.json())

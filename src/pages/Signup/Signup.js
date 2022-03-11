@@ -161,7 +161,7 @@ export default function Signup() {
     } else {
       loginGender = 3;
     }
-    fetch('http://10.58.7.75:8000/users/signup', {
+    fetch('http://10.58.6.175:8000/users/signup', {
       method: 'POST',
       body: JSON.stringify({
         full_name: signupValues.userName,

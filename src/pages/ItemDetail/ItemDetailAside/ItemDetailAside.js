@@ -1,6 +1,3 @@
-import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-
 import './ItemDetailAside.scss';
 
 export default function ItemDetailAside({ itemData }) {
@@ -15,7 +12,7 @@ export default function ItemDetailAside({ itemData }) {
   );
 
   const clickBuyBtn = () => {
-    fetch('http://10.58.7.75:8000/users/cart', {
+    fetch('http://10.58.6.175:8000/users/cart', {
       method: 'POST',
       headers: { Authorization: localStorage.getItem('access_token') },
       body: JSON.stringify({
