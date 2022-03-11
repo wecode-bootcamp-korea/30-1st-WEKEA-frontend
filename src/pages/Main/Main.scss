@@ -1,39 +1,78 @@
 @import '../../styles/mixin.scss';
 
-.saleProductHeader {
-  @include flexBox(space-between, center);
-  width: 1200px;
+.main {
+  margin: 160px 0 0 100px;
 
-  .saleProductComment {
-    line-height: 37px;
+  .wecodeSeries {
+    margin-bottom: 80px;
+    padding: 48px;
+    width: 1200px;
+    color: #111111;
+    background-color: rgb(138, 164, 171);
 
-    .saleProductTitle {
+    .wecodeSeriesTitle {
+      margin-bottom: 18px;
       font-size: 24px;
-      font-weight: bold;
+      font-weight: 700;
     }
 
-    span {
+    .wecodeSeriesContent {
       font-size: 14px;
-      color: #484848;
+    }
+
+    .wecodeSeriesBtn {
+      margin-top: 35px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      background-color: #111111;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #484848;
+      }
     }
   }
 
-  .saleProductMoreBtn {
-    padding: 0 1.5rem;
-    height: 2.5rem;
-    border: 1px solid #dfdfdf;
-    border-radius: 64px;
-    background-color: white;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
+  .saleProducts {
+    .saleProductHeader {
+      @include flexBox(space-between, center);
+      width: 1200px;
 
-    &:hover {
-      border-color: #ccc;
+      .saleProductComment {
+        line-height: 37px;
+
+        .saleProductTitle {
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        span {
+          font-size: 14px;
+          color: #484848;
+        }
+      }
+
+      .saleProductMoreBtn {
+        padding: 0 1.5rem;
+        height: 2.5rem;
+        border: 1px solid #dfdfdf;
+        border-radius: 64px;
+        background-color: white;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          border-color: #ccc;
+        }
+      }
+    }
+
+    .saleProductList {
+      display: flex;
     }
   }
-}
-
-.saleProductList {
-  display: flex;
-  position: absolute;
 }

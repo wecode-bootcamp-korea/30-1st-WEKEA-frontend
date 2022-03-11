@@ -1,0 +1,165 @@
+@import '../../../styles/mixin.scss';
+
+$loginColor: #0058a3;
+
+.loginAside {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease-in-out;
+
+  .sideRight {
+    position: absolute;
+    top: 0;
+    right: -31.25rem;
+    bottom: 0;
+    width: 31.25rem;
+    height: 100vh;
+    background-color: white;
+    z-index: 9001;
+    transition: transform 0.3s ease-in-out;
+
+    .closeBtn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      color: white;
+      background-color: $loginColor;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: #111111;
+        background-color: #e2e2e2;
+      }
+    }
+
+    .account {
+      @include flexBox(space-between);
+      width: 100%;
+      border-bottom: 1px solid rgba(220, 226, 255, 0.336);
+      padding: 120px 48px 40px;
+      background-color: $loginColor;
+
+      h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: white;
+      }
+
+      .loginBtn {
+        div {
+          @include flexBox(center);
+          padding: 0 24px;
+          height: 40px;
+          width: 82px;
+        }
+
+        border-radius: 30px;
+        color: #111111;
+        background-color: white;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #e2e2e2;
+        }
+      }
+    }
+
+    .sign {
+      .signLink {
+        @include flexBox(space-between);
+        padding: 20px 48px;
+        background-color: $loginColor;
+        text-decoration: none;
+
+        .signComponent {
+          padding-right: 16px;
+          width: 82%;
+          color: white;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+
+          .subject {
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: bold;
+          }
+
+          .subText {
+            font-size: 12px;
+            line-height: 22px;
+          }
+        }
+
+        .signBtn {
+          @include flexBox(center);
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          color: #111111;
+          background-color: white;
+          font-size: 30px;
+          text-decoration: none;
+
+          &:hover {
+            background-color: #e2e2e2;
+          }
+        }
+      }
+    }
+
+    .loginWrap {
+      @include flexBox(flex-start, flex-start, column);
+      padding: 40px 48px 0px;
+      font-size: 14px;
+
+      .sideMenu {
+        margin-bottom: 30px;
+        text-decoration: none;
+        color: #111111;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .leftTransfrom {
+    transform: translateX(-31.25rem);
+  }
+
+  .modalCloser {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 31.25rem;
+    top: 0;
+  }
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}

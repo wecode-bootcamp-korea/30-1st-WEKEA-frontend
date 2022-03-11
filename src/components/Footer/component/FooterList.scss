@@ -1,0 +1,21 @@
+@import '../../../styles/mixin.scss';
+
+.footerList {
+  color: #484848;
+  font-size: 14px;
+
+  h1 {
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  li {
+    cursor: pointer;
+    line-height: 38px;
+
+    &:hover {
+      color: black;
+      text-decoration: underline;
+    }
+  }
+}

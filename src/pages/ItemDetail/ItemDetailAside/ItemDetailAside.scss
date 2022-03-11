@@ -44,7 +44,7 @@
   .asideBoxInfo {
     width: 460px;
     height: 150px;
-    @include flexBox(center, start, column);
+    @include flexBox(center, flex-start, column);
     gap: 5px;
     border-bottom: 1px solid #dfdfdf;
 

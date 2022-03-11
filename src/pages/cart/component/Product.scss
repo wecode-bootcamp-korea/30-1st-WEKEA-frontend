@@ -1,0 +1,116 @@
+@import '../../../styles/mixin.scss';
+
+.product {
+  @include flexBox(space-between);
+  padding: 40px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #dfdfdf;
+  }
+
+  .productContent {
+    display: flex;
+
+    .productImg {
+      margin-right: 30px;
+      width: 140px;
+      height: 190px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+      }
+    }
+
+    .productInfo {
+      @include flexBox(space-between, flex-start, column);
+      color: #484848;
+
+      .productHeader {
+        @include flexBox(flex-start, flex-start, column);
+        line-height: 23px;
+
+        .onSale {
+          color: #ed022a;
+          font-size: 14px;
+          font-weight: 700;
+        }
+
+        .productName {
+          font-size: 16px;
+          font-weight: 700;
+          color: #484848;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        span {
+          font-size: 14px;
+
+          .lineThrough {
+            text-decoration: line-through;
+          }
+        }
+      }
+
+      .cartOperator {
+        display: flex;
+
+        .quantitySeloctor {
+          position: relative;
+          display: flex;
+          align-items: center;
+          width: 80px;
+          height: 40px;
+          border: 1px solid #dfdfdf;
+          border-radius: 50px;
+          font-size: 12px;
+          transition: all 0.1 ease-in-out;
+
+          &:hover {
+            border-color: #929292;
+          }
+
+          &:focus-within {
+            border-color: #484848;
+          }
+
+          select {
+            all: unset;
+            padding-left: 15px;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+          }
+
+          .fa-angle-down {
+            position: absolute;
+            right: 18px;
+            pointer-events: none;
+            font-size: 14px;
+          }
+        }
+
+        .deleteBtn {
+          background-color: unset;
+          border: none;
+          margin-left: 20px;
+          font-size: 0.875rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .productPrice {
+    align-self: flex-start;
+    color: #484848;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}

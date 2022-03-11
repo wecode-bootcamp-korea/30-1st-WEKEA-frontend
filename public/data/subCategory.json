@@ -1,0 +1,20 @@
+[
+  { "sub_id": 1, "sub_category_name": "사무용의자" },
+  { "sub_id": 2, "sub_category_name": "식탁의자" },
+  { "sub_id": 3, "sub_category_name": "어린이의자" },
+  { "sub_id": 4, "sub_category_name": "암체어 / 카우치" },
+  { "sub_id": 5, "sub_category_name": "스툴 / 벤치" },
+  { "sub_id": 6, "sub_category_name": "식탁세트" },
+  { "sub_id": 7, "sub_category_name": "바의자" },
+  { "sub_id": 8, "sub_category_name": "카페의자" },
+  { "sub_id": 9, "sub_category_name": "의자패드" },
+  { "sub_id": 10, "sub_category_name": "스텝스툴 / 사다리" },
+  { "sub_id": 11, "sub_category_name": "영유아의자" },
+  { "sub_id": 12, "sub_category_name": "화장대" },
+  { "sub_id": 13, "sub_category_name": "식탁" },
+  { "sub_id": 14, "sub_category_name": "바테이블" },
+  { "sub_id": 15, "sub_category_name": "싱글 / 수퍼싱글 침대" },
+  { "sub_id": 16, "sub_category_name": "더블 / 퀸 / 킹 침대" },
+  { "sub_id": 17, "sub_category_name": "영유아 침대" },
+  { "sub_id": 18, "sub_category_name": "거실장 / 찬장" }
+]
