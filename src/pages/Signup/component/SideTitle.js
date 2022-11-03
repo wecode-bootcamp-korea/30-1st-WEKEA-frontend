@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 
+import Logo from '../../../components/Logo/Logo';
+
 import './SideTitle.scss';
 
 export default function SideTitle({ familySignup }) {
   return (
     <div className="sideTitle">
-      <div className="logo">
-        <div className="logoInside">이케해여?</div>
-      </div>
+      <Logo />
       {familySignup && <h1 className="familyTitle">이케해여? Family</h1>}
       <h1 className="signupTitle">회원 가입</h1>
       <div className="goToLogin">

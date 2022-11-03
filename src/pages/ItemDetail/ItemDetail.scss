@@ -2,6 +2,7 @@
 
 .item {
   @include flexBox(center, center, column);
+  margin-top: 140px;
 
   .itemBox {
     display: flex;

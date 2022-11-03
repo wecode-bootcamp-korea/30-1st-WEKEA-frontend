@@ -1,0 +1,90 @@
+@import '../../styles/mixin.scss';
+
+.cartWrapper {
+  margin: 0 40px 0 120px;
+  padding: 155px 0 130px 0;
+  border-bottom: 1px solid #dfdfdf;
+  height: fit-content;
+  max-width: 1250px;
+
+  .cart {
+    flex-grow: 1;
+
+    .cartHeader {
+      @include flexBox(space-between);
+      margin: 20px 0;
+
+      .cartTitle {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .filledIn {
+        font-size: 36px;
+      }
+
+      .empty {
+        font-size: 24px;
+      }
+
+      .cartIngkaBtn {
+        border: none;
+        width: 56px;
+        height: 56px;
+        background-color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+          background-color: #f5f5f5;
+        }
+
+        &:active {
+          background-color: #dfdfdf;
+          transform: scale(0.98);
+        }
+      }
+    }
+
+    .unloginMember {
+      margin: 40px 0;
+    }
+  }
+
+  .unloginMember {
+    @include flexBox(space-between);
+    padding: 2rem 1.25rem;
+    margin: 40px 0;
+    border: 1px solid #dfdfdf;
+    border-radius: 4px;
+
+    .unloginComment {
+      display: flex;
+      flex-direction: column;
+      line-height: 23px;
+
+      .unloginCommentTitle {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .unloginLink {
+        font-size: 14px;
+        color: #333333;
+
+        a {
+          color: #484848;
+        }
+      }
+    }
+
+    .fa-user {
+      font-size: 22px;
+    }
+  }
+}
+
+.login {
+  @include flexBox(space-between, flex-start);
+}

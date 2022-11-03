@@ -1,0 +1,41 @@
+[
+  {
+    "cart_id": 42,
+    "color": "black",
+    "discount": "19900.00",
+    "main_category": "의자",
+    "price": "19900.00",
+    "product_name": "FLISAT 플리사트 어린이스툴",
+    "stock": 25,
+    "quantity": 3,
+    "size": "M",
+    "sub_category": "어린이의자",
+    "image": "https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+  },
+  {
+    "cart_id": 43,
+    "color": "white",
+    "discount": "19900.00",
+    "main_category": "의자",
+    "price": "19900.00",
+    "product_name": "FLISAT 플리사트 어린이스툴",
+    "stock": 25,
+    "quantity": 2,
+    "size": "XL",
+    "sub_category": "어린이의자",
+    "image": "https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+  },
+  {
+    "cart_id": 44,
+    "color": "red",
+    "discount": "199000.00",
+    "main_category": "의자",
+    "price": "199000.00",
+    "product_name": "MARKUS 마르쿠스",
+    "stock": 25,
+    "quantity": 1,
+    "size": "L",
+    "sub_category": "사무용의자",
+    "image": "https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+  }
+]
