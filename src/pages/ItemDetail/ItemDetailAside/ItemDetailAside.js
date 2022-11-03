@@ -5,12 +5,6 @@ export default function ItemDetailAside({ itemData }) {
     return parseInt(price).toLocaleString();
   };
 
-  //TODO: 로그인시 토큰담아주면 지우기
-  localStorage.setItem(
-    'access_token',
-    'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDB9.jaVtaLBtu0J6bHvB6kLF89BYiQgSYX9bMtwtAjPwNx8'
-  );
-
   const clickBuyBtn = () => {
     fetch('http://10.58.6.175:8000/users/cart', {
       method: 'POST',
@@ -20,15 +14,18 @@ export default function ItemDetailAside({ itemData }) {
         product_id: itemData.id,
       }),
     })
-      // .then(res => res.json())
+      .then(res => res.json())
       .then(result => {
-        if (result.status === 201) {
-          alert('장바구니에 추가됐습니다.');
-        } else {
-          alert('재고가 부족합니다.');
-        }
+        console.log(result);
+        // if (result.status === 201) {
+        //   alert('장바구니에 추가됐습니다.');
+        // } else {
+        //   alert('재고가 부족합니다.');}
       });
   };
+
+  // eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoxNCwiZXhwIjoxNjQ3MDIxNzE4fQ.sgsonbFEkJ_hx_YBi5jq-l6usXQtPoAMMSDXOU5ivAc
+  // qwer12556@qwer.com
 
   return (
     <div className="asideBox">

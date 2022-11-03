@@ -10,25 +10,8 @@ import './Cart.scss';
 export default function Cart() {
   const [cartData, setCartData] = useState([]);
 
-  // useEffect(() => {
-  //   fetch('http://10.58.7.75:8000/users/cart', {
-  //     method: 'GET',
-  //     headers: {
-  //       Authorization: localStorage.getItem('access_token'),
-  //     },
-  //   })
-  //     .then(response => response.json())
-  //     .then(result => {
-  //       if (result.message === 'USER_NOT_EXISTS') {
-  //         setCartData([]);
-  //         return;
-  //       }
-  //       setCartData(result.result);
-  //     });
-  // }, []);
-
   useEffect(() => {
-    fetch('/data/cart.json', {
+    fetch('http://10.58.7.75:8000/users/cart', {
       method: 'GET',
       headers: {
         Authorization: localStorage.getItem('access_token'),
@@ -40,9 +23,27 @@ export default function Cart() {
           setCartData([]);
           return;
         }
-        setCartData(result);
+        setCartData(result.result);
       });
   }, []);
+
+  // mock 데이터 set
+  // useEffect(() => {
+  //   fetch('/data/cart.json', {
+  //     method: 'GET',
+  //     headers: {
+  //       Authorization: localStorage.getItem('access_token'),
+  //     },
+  //   })
+  //     .then(response => response.json())
+  //     .then(result => {
+  //       if (result.message === 'USER_NOT_EXISTS') {
+  //         setCartData([]);
+  //         return;
+  //       }
+  //       setCartData(result);
+  //     });
+  // }, []);
 
   const changeCountBtn = (e, data) => {
     if (e.target.value !== '0') {
